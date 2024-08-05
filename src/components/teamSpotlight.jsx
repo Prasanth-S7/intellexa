@@ -2,41 +2,44 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const TeamSpotlight = () => {
     const horizontalScrollRef = useRef(null);
+    const triggerSection = useRef(null);
 
-    useEffect(() => {
-        // GSAP ScrollTrigger for horizontal scrolling effect
+    useGSAP(() => {
+        console.log(horizontalScrollRef.current.offSetWidth)
         gsap.to(horizontalScrollRef.current, {
-            x: () => -(horizontalScrollRef.current.scrollWidth - window.innerWidth),
+            x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
             ease: "none",
             scrollTrigger: {
-                trigger: horizontalScrollRef.current,
-                pin: true, // Pin the section in place
-                start: "top top", // When the top of the trigger hits the top of the viewport
-                end: () => `+=${horizontalScrollRef.current.scrollWidth - window.innerWidth}`, // End point based on content width
-                scrub: true, // Smoothly scrub through the scroll
+                trigger: triggerSection.current,
+                pin: true, 
+                start: "top 10%",
+                end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth } `, // End point based on content width
+                scrub: 1, 
+                markers:true
             },
         });
     }, []);
 
     return (
-        <section className="h-screen mx-[300px] border-2 border-white ">
+        <section className="h-screen mx-[300px]  " ref={triggerSection}>
             <div className="flex flex-col items-start">
                 <div className="space-x-14 text-6xl flex-col justify-start mb-[100px]">
                     <div className="px-[5px] text-custom-purple font-bold border-l-4 pl-5 border-custom-purple">
                         Team <br /> Spotlight
                     </div>
                 </div>
-                <div className="overflow-hidden"> {/* Hide horizontal scrollbar */}
+                <div className=""> 
                     <div
-                        className="flex space-x-10"
+                        className="flex space-x-10 mx-0"
                         ref={horizontalScrollRef}
                     >
-                        <div className="w-[400px] h-[400px] ml-[500px] border border-white"></div>
+                        <div className="w-[400px] h-[400px] border border-white ml-[500px]"></div>
                         <div className="w-[400px] h-[400px] border border-white"></div>
                         <div className="w-[400px] h-[400px] border border-white"></div>
                         <div className="w-[400px] h-[400px] border border-white"></div>
