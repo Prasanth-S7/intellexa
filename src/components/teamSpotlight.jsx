@@ -21,7 +21,7 @@ export const TeamSpotlight = () => {
                 start: "top 10%",
                 end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth } `, // End point based on content width
                 scrub: 1, 
-                markers:true
+                // markers:true
             },
         });
     }, []);
