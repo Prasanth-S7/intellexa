@@ -37,7 +37,7 @@ export const AboutUs = ({ heroRef }) => {
         <section className="mx-[300px] flex justify-between text-white mb-[170px]">
             <div className="flex space-x-[200px]">
                 <div className="space-x-14 text-6xl flex-col justify-start">
-                    <div className="px-[5px] text-custom-purple font-bold border-l-4 pl-5 border-custom-purple" ref={leftSection}>
+                    <div className="px-[5px] text-custom-yellow font-bold border-l-4 pl-5 border-custom-yellow" ref={leftSection}>
                         About Us
                     </div>
                 </div>

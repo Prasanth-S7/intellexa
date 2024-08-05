@@ -30,7 +30,7 @@ export const TeamSpotlight = () => {
         <section className="h-screen mx-[300px]  " ref={triggerSection}>
             <div className="flex flex-col items-start">
                 <div className="space-x-14 text-6xl flex-col justify-start mb-[100px]">
-                    <div className="px-[5px] text-custom-purple font-bold border-l-4 pl-5 border-custom-purple">
+                    <div className="px-[5px] text-custom-yellow font-bold border-l-4 pl-5 border-custom-yellow">
                         Team <br /> Spotlight
                     </div>
                 </div>
