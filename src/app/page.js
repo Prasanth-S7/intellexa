@@ -1,5 +1,5 @@
 import { HeroSectionClient } from '@/components/heroSection';
-import { TeamSpotlight } from '@/components/teamSpotlight';
+import { TeamSpotlight } from '@/components/whyjoinIntellexa';
 import { Footer } from '@/components/footer';
 
 export default function Home() {
