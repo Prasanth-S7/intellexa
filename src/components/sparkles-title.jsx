@@ -9,7 +9,7 @@ export function SparklesTitle() {
             <h1 className="md:text-7xl text-[#9207fb] text-5xl lg:text-7xl font-bold text-center relative z-20 mt-0">
                 <div>
                     <div className="text-white mb-10 font-slussenLight text-2xl font-semibold">The place where creativity meets invention: striving for groundbreaking achievements one step at a time.</div>
-                    <div className="text-custom-purple">INTELLEXA</div>
+                    <div className="text-[#1a23ff]">INTELLEXA</div>
                 </div>
             </h1>
             <div className="w-[40rem] h-40 relative">
