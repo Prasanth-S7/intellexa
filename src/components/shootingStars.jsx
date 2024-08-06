@@ -8,8 +8,9 @@ export function ShootingStarsAndStarsBackgroundDemo({ children }) {
         <div className="min-h-screen rounded-md bg-neutral-900 flex flex-col items-center justify-center relative w-full">
             <h2 className="relative flex-col md:flex-row z-10 text-4xl md:text-7xl md:leading-tight max-w-5xl mx-auto text-center font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-white to-white flex items-center gap-2 md:gap-8">
                 <div>
-                    <div className="text-custom-purple">Intellexa</div>
-                    <div className="text-lg text-white">The technical Club of REC.........</div>
+                    <div className="text-white mb-10 font-slussenLight text-2xl font-semibold">The place where creativity meets invention: striving for groundbreaking achievements one step at a time.</div>
+                    <div className="text-custom-purple">INTELLEXA</div>
+                    <div className="text-lg text-white font-slussenLight">Innovative.Impact.Inspire.</div>
                 </div>
                 {/* <SparklesTitle></SparklesTitle> */}
             </h2>

@@ -16,7 +16,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="fixed w-full z-20 top-0 start-0 backdrop-filter bg-[#171717]  shadow-lg">
+        <nav className="fixed w-full z-20 top-0 start-0 backdrop-filter bg-[#171717]  shadow-lg font-slussenLight">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="https://www.linkedin.com/in/intellexa-rec-1034452a8/" className="flex overflow-hidden w-[300px] h-[50px] pt-[10px] items-center space-x-3 rtl:space-x-reverse">
                     <Image className="object-cover w-[200px]" src={logo} width={200}  ></Image>

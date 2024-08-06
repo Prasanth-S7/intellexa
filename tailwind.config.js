@@ -17,9 +17,13 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        slussen: ['Slussen', 'sans-serif'],
+        slussenLight: ['SlussenLight', 'sans-serif']
+      },
       colors: {
-        'custom-purple':"#9208ff",
-        'custom-yellow':"#faffcc",
+        'custom-purple': "#9208ff",
+        'custom-yellow': "#faffcc",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

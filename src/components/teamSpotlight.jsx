@@ -18,7 +18,7 @@ export const TeamSpotlight = () => {
             scrollTrigger: {
                 trigger: triggerSection.current,
                 pin: true, 
-                start: "top 10%",
+                start: "top 12%",
                 end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth } `, // End point based on content width
                 scrub: 1, 
                 // markers:true
@@ -30,8 +30,8 @@ export const TeamSpotlight = () => {
         <section className="h-screen mx-[300px]  " ref={triggerSection}>
             <div className="flex flex-col items-start">
                 <div className="space-x-14 text-6xl flex-col justify-start mb-[100px]">
-                    <div className="px-[5px] text-custom-yellow font-bold border-l-4 pl-5 border-custom-yellow">
-                        Team <br /> Spotlight
+                    <div className="px-[5px] text-custom-yellow font-slussen font-bold border-l-4 pl-5 border-custom-yellow">
+                        WHY JOIN<br /> INTELLEXA? 
                     </div>
                 </div>
                 <div className=""> 

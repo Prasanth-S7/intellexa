@@ -92,3 +92,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Slussen';
+  src: url("../assets/fonts/Slussen-Expanded-Black-TRIAL.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SlussenLight';
+  src: url("../assets/fonts/Slussen-Extended-Light-TRIAL.otf") format("opentype");
+}
+
+.font-slussen {
+  font-family: 'Slussen', sans-serif;
+  /* color: white; */
+}
