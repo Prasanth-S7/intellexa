@@ -2,6 +2,7 @@
 import React from "react";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import { CustomButton } from "./joinUsButton";
 import { SparklesTitle } from "./sparkles-title";
 export function ShootingStarsAndStarsBackgroundDemo({ children }) {
     return (
@@ -11,6 +12,9 @@ export function ShootingStarsAndStarsBackgroundDemo({ children }) {
                     <div className="text-white mb-10 font-slussenLight text-2xl font-semibold">The place where creativity meets invention: striving for groundbreaking achievements one step at a time.</div>
                     <div className="text-custom-purple">INTELLEXA</div>
                     <div className="text-lg text-white font-slussenLight">Innovative.Impact.Inspire.</div>
+                    <div>
+                        <CustomButton name="Join us"></CustomButton>
+                    </div>
                 </div>
                 {/* <SparklesTitle></SparklesTitle> */}
             </h2>

@@ -12,7 +12,7 @@ export const TeamSpotlight = () => {
     const triggerSection = useRef(null);
 
     useGSAP(() => {
-        console.log(horizontalScrollRef.current.offSetWidth)
+        // console.log(horizontalScrollRef.current.offSetWidth)
         gsap.to(horizontalScrollRef.current, {
             x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
             ease: "none",

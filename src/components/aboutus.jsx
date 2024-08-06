@@ -12,7 +12,7 @@ export const AboutUs = ({ heroRef }) => {
     const lastLoremDiv = useRef(null);
 
     useGSAP(() => {
-        console.log(heroRef.current);
+        // console.log(heroRef.current);
         const left = leftSection.current;
         const right = rightSection.current;
         const last = lastLoremDiv.current;
