@@ -10,7 +10,7 @@ export const HeroSectionClient = () => {
 
     return (
         <div>
-            <section className='mb-[300px] min-h-screen font-slussen pt-0 ' ref={heroRef}>
+            <section className='mb-[300px] h-screen overflow-y-hidden font-slussen pt-0 ' ref={heroRef}>
                 <FloatingNavDemo></FloatingNavDemo>
                 <ShootingStarsAndStarsBackgroundDemo />
             </section>
