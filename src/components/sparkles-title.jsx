@@ -2,13 +2,13 @@
 import React, { forwardRef } from "react";
 import { SparklesCore } from "./ui/sparkles";
 import { FlipWordsDemo } from "./innovate-inspire";
-
+import { HeroHighlightDemo } from "./heroHighlight";
 export function SparklesTitle() {
     return (
         <div className=" bg-transparent w-full bg-black flex flex-col items-center justify-end overflow-hidden rounded-md">
             <h1 className="md:text-7xl text-[#9207fb] text-5xl lg:text-7xl font-bold text-center relative z-20 mt-0">
                 <div>
-                    <div className="text-white mb-10 font-slussenLight text-2xl font-semibold">The place where creativity meets invention: striving for groundbreaking achievements one step at a time.</div>
+                    <div className="text-white mb-10 font-slussenLight text-2xl font-semibold"><HeroHighlightDemo></HeroHighlightDemo></div>
                     <div className="text-[#1a23ff]">INTELLEXA</div>
                 </div>
             </h1>
