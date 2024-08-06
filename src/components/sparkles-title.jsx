@@ -27,7 +27,7 @@ export const SparklesTitle = forwardRef((props, ref) => (
                     particleColor="#FFFFFF"
                 />
 
-                <div className="absolute inset-0 w-full border-2 border-white h-full bg-[#171717] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
+                <div className="absolute inset-0 w-full h-full bg-[#171717] [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
             </div>
         </div>
     </div>

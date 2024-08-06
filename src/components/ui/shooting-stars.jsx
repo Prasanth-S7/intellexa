@@ -23,11 +23,11 @@ export const ShootingStars = ({
   minSpeed = 10,
   maxSpeed = 30,
   minDelay = 1200,
-  maxDelay = 4200,
+  maxDelay = 2200,
   starColor = "#9E00FF",
   trailColor = "#2EB9DF",
   starWidth = 10,
-  starHeight = 1,
+  starHeight = 4,
   className,
 }) => {
   const [star, setStar] = useState(null);
