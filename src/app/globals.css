@@ -112,15 +112,15 @@
 .uiverse {
   --duration: 7s;
   --easing: linear;
-  --c-color-1: rgba(255, 163, 26, .7);
-  --c-color-2: #1a23ff;
-  --c-color-3: #e21bda;
-  --c-color-4: rgba(255, 232, 26, .7);
-  --c-shadow: rgba(255, 223, 87, .5);
-  --c-shadow-inset-top: rgba(255, 223, 52, .9);
-  --c-shadow-inset-bottom: rgba(255, 250, 215, .8);
-  --c-radial-inner: #ffd215;
-  --c-radial-outer: #fff172;
+  --c-color-1: rgba(27, 161, 226, .7); /* Dark Neon Blue */
+  --c-color-2: #1a23ff; /* Dark Neon Blue */
+  --c-color-3: #7a42f4; /* Light Purple */
+  --c-color-4: rgba(100, 149, 237, .7); /* Light Accent Blue */
+  --c-shadow: #1a23ff;
+  --c-shadow-inset-top: #1a23ff;
+  --c-shadow-inset-bottom:  rgba(27, 161, 226, .7);
+  --c-radial-inner:#7a42f4 #1a23ff;
+  --c-radial-outer: rgba(100, 149, 237, .7);
   --c-color: #fff;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
@@ -141,6 +141,7 @@
   background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
   box-shadow: 0 0 14px var(--c-shadow);
 }
+
 
 .uiverse:before {
   content: '';
