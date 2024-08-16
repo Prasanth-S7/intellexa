@@ -29,8 +29,8 @@ export function FloatingNavDemo() {
         },
     ];
     return (
-        <div className="relative  w-full pt-0 ">
-            <FloatingNav className="font-slussenLight"navItems={navItems} />
+        <div className="relative w-full t-0 md:block hidden">
+            <FloatingNav className="font-slussenLight "navItems={navItems} />
         </div>
     );
 }
