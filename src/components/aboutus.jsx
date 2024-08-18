@@ -66,7 +66,7 @@ export const AboutUs = ({ heroRef }) => {
         };
     }, [isLargeScreen]);
     return (
-        <section className="mx-[15%] md:flex justify-between text-white mb-[170px]">
+        <section className="mx-[15%] md:flex justify-between text-white md:mb-[300px] mb-[100px]">
             <div className="md:flex md:space-x-[15%]">
                 <div className="space-x-14 text-6xl flex-col justify-start">
                     <div className="px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
@@ -75,7 +75,7 @@ export const AboutUs = ({ heroRef }) => {
                 </div>
                 <div className="md:flex-col w-full mt-[40%] overflow-y-auto" ref={rightSection}>
                     <div className='md:mb-[50%] mb-[30%] ml-0 w-fit'>
-                        <div className='text-custom-purple mb-5 font-slussen font-semibold lg:text-3xl md:text-xl text-xl'>
+                        <div className='text-custom-purple mb-5 font-slussen font-semibold lg:text-[28px] md:text-xl text-xl'>
                             MISSION AND VISION
                         </div>
                         <div className='text-[19px] font-slussenLight'>
@@ -83,7 +83,7 @@ export const AboutUs = ({ heroRef }) => {
                         </div>
                     </div>
                     <div className='md:mb-[50%] mb-[30%]'>
-                        <div className='text-custom-purple mb-5 font-semibold font-slussen lg:text-3xl md:text-xl text-xl'>
+                        <div className='text-custom-purple mb-5 font-semibold font-slussen lg:text-[28px] md:text-xl text-xl'>
                             KEY PROJECTS AND INITIATIVES
                         </div>
                         <div className='text-[19px] font-slussenLight'>
@@ -91,7 +91,7 @@ export const AboutUs = ({ heroRef }) => {
                         </div>
                     </div>
                     <div className=" md:mb-[50%] mb-[30%] " ref={lastLoremDiv}>
-                        <div className='text-custom-purple mb-5 font-semibold font-slussen lg:text-3xl md:text-xl text-xl'>
+                        <div className='text-custom-purple mb-5 font-semibold font-slussen lg:text-[28px] md:text-xl text-xl'>
                             OPPURTUNITIES FOR INVOLVEMENT
                         </div>
                         <div className='text-[19px] font-slussenLight'>
