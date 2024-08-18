@@ -66,7 +66,7 @@ export const AboutUs = ({ heroRef }) => {
         };
     }, [isLargeScreen]);
     return (
-        <section className="mx-[15%] md:flex justify-between text-white md:mb-[300px] mb-[100px]">
+        <section className="md:mx-[15%] mx-[10%] md:flex justify-between text-white md:mb-[300px] mb-[100px]">
             <div className="md:flex md:space-x-[15%]">
                 <div className="space-x-14 text-6xl flex-col justify-start">
                     <div className="px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
