@@ -5,7 +5,7 @@ import { FlipWordsDemo } from "./innovate-inspire";
 import { HeroHighlightDemo } from "./heroHighlight";
 export function SparklesTitle() {
     return (
-        <div className=" bg-transparent overflow-x-hidden w-full bg-black flex flex-col items-center justify-end overflow-hidden rounded-md">
+        <div className=" bg-transparent overflow-x-hidden w-full h-[650px] bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
             <h1 className="md:text-7xl text-[#9207fb] text-5xl lg:text-7xl font-bold text-center relative z-20 mt-0">
                 <div>
                     <div className="text-white mb-10 font-slussenLight text-2xl font-semibold"><HeroHighlightDemo></HeroHighlightDemo></div>
