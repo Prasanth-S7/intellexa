@@ -76,11 +76,11 @@ export const TeamSpotlight = () => {
                         className="md:flex md:space-x-10 mx-0 overflow-hidden"
                         ref={horizontalScrollRef}
                     >
-                        <HorizontalScroll number="01" className={`md:ml-[500px] md:mb-0 mb-6`} info="Work on cutting-edge projects across various domains, from IoT solutions to creative content, and gain hands-on experience with real-world applications"/>
-                        <HorizontalScroll number="02" className={`md:mb-0 mb-6`} info="Enhance your technical, creative, and communication skills through diverse team roles and challenging tasks, preparing you for future career opportunities"/>
-                        <HorizontalScroll number="03" className={`md:mb-0 mb-6`} info="Join a vibrant community of like-minded peers, collaborate with experts, and contribute to exciting initiatives that make a difference"/>
-                        <HorizontalScroll number="04" className={`md:mb-0 mb-6`} info="Participate in and organize impactful events that showcase your talents, foster creativity, and help build the club's legacy"/>
-                        <HorizontalScroll number="05" className={`md:mb-0 mb-6`} info="Build a strong network, improve your resume, and gain valuable experience that will set you apart in the professional world"/>
+                        <HorizontalScroll number="01" className={`md:ml-[500px] md:mb-0 mb-6`} info="Work on cutting-edge projects across various domains, from IoT solutions to content creation, and gain hands-on experience working with real-world applications in technology"/>
+                        <HorizontalScroll number="02" className={`md:mb-0 mb-6`} info="Enhance your technical, creative, and communication skills through diverse team roles, challenging tasks, and projects, all preparing you for future career growth opportunities"/>
+                        <HorizontalScroll number="03" className={`md:mb-0 mb-6`} info="Join a vibrant community of passionate peers, collaborate with experts, and contribute to meaningful initiatives that have an impact on the world around you"/>
+                        <HorizontalScroll number="04" className={`md:mb-0 mb-6`} info="Participate in and organize impactful events that highlight your talents, foster creativity, and contribute to the lasting legacy of the club's initiatives and growth"/>
+                        <HorizontalScroll number="05" className={`md:mb-0 mb-6`} info="Build a strong professional network, improve your resume, and gain valuable, hands-on experience that will distinguish you in the competitive world of work"/>
                     </div>
                 </div>
             </div>
