@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -10,23 +10,59 @@ gsap.registerPlugin(ScrollTrigger);
 export const TeamSpotlight = () => {
     const horizontalScrollRef = useRef(null);
     const triggerSection = useRef(null);
+    const scrollTriggerRef = useRef(null);
+    const resizeTimeout = useRef(null);
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-    useGSAP(() => {
-        // console.log(horizontalScrollRef.current.offSetWidth)
-        gsap.to(horizontalScrollRef.current, {
-            x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
-            ease: "none",
-            scrollTrigger: {
-                trigger: triggerSection.current,
-                pin: true,
-                start: "top 12%",
-                end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth} `, // End point based on content width
-                scrub: 1,
-                // markers:true
-            },
-        });
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const handleResize = () => {
+                clearTimeout(resizeTimeout.current);
+                resizeTimeout.current = setTimeout(() => {
+                    setIsLargeScreen(window.innerWidth > 768);
+                    ScrollTrigger.refresh();
+                }, 150);
+            };
+
+            handleResize();
+            window.addEventListener('resize', handleResize);
+
+            return () => {
+                clearTimeout(resizeTimeout.current);
+                window.removeEventListener('resize', handleResize);
+            };
+        }
     }, []);
 
+    useGSAP(() => {
+        if (scrollTriggerRef.current) {
+            scrollTriggerRef.current.kill();
+        }
+
+        if (!isLargeScreen) {
+            return; 
+        }
+
+        if (horizontalScrollRef.current && triggerSection.current) {
+            scrollTriggerRef.current = gsap.to(horizontalScrollRef.current, {
+                x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: triggerSection.current,
+                    pin: true,
+                    start: "top 12%",
+                    end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth}`,
+                    scrub: 1,
+                    // markers: true,
+                },
+            });
+        }
+        return () => {
+            if (scrollTriggerRef.current) {
+                scrollTriggerRef.current.kill();
+            }
+        };
+    }, [isLargeScreen]);
     return (
         <section className="h-screen mx-[300px]  " ref={triggerSection}>
             <div className="flex flex-col items-start">
