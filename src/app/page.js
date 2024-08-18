@@ -6,7 +6,7 @@ export default function Home() {
   return (
       <div>
         <HeroSectionClient />
-        <TeamSpotlight />
+        {/* <TeamSpotlight /> */}
         <Footer />
       </div>
   );

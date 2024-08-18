@@ -73,7 +73,7 @@ export const AboutUs = ({ heroRef }) => {
                         ABOUT US
                     </div>
                 </div>
-                <div className="flex-col w-full md:mt-[40%] mt-[10%] overflow-y-auto" ref={rightSection}>
+                <div className="md:flex-col w-full md:mt-[40%] mt-[20%] overflow-y-auto" ref={rightSection}>
                     <div className='md:mb-[50%] mb-[30%] ml-0 w-fit'>
                         <div className='text-custom-purple mb-5 font-slussen font-semibold lg:text-3xl md:text-xl text-xl'>
                             MISSION AND VISION
