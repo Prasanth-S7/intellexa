@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import Menu from "./menu";
+
 export function FloatingNavDemo() {
     const navItems = [
         {
@@ -13,24 +15,33 @@ export function FloatingNavDemo() {
         },
         {
             name: "Team",
-            link: "/contact",
+            link: "/team",
         },
         {
             name: "Events",
-            link: "/contact",
+            link: "/events",
         },
         {
             name: "Projects",
-            link: "/contact",
+            link: "/projects",
         },
         {
             name: "Contact",
             link: "/contact",
         },
     ];
+
     return (
-        <div className="relative w-full t-0 md:block hidden">
-            <FloatingNav className="font-slussenLight "navItems={navItems} />
+        <div className="relative w-full t-0">
+            {/* Show Menu component on small screens */}
+            <div className="block md:hidden">
+                <Menu navItems={navItems}/>
+            </div>
+
+            {/* Show FloatingNav component on medium and larger screens */}
+            <div className="hidden md:block">
+                <FloatingNav className="font-slussenLight" navItems={navItems} />
+            </div>
         </div>
     );
 }
