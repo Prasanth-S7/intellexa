@@ -106,12 +106,12 @@ export const ShootingStars = ({
             star.x + (starWidth * star.scale) / 2
           }, ${star.y + starHeight / 2})`} />
       )}
-      <defs>
+      {/* <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style={{ stopColor: trailColor, stopOpacity: 0 }} />
           <stop offset="100%" style={{ stopColor: starColor, stopOpacity: 1 }} />
         </linearGradient>
-      </defs>
+      </defs> */}
     </svg>)
   );
 };
