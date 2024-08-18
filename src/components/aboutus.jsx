@@ -69,7 +69,7 @@ export const AboutUs = ({ heroRef }) => {
         <section className="mx-[15%] md:flex justify-between text-white mb-[170px]">
             <div className="md:flex md:space-x-[15%]">
                 <div className="space-x-14 text-6xl flex-col justify-start">
-                    <div className="px-[5px] text-white lg:text-6xl md:text-4xl text-5xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
+                    <div className="px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
                         ABOUT US
                     </div>
                 </div>
