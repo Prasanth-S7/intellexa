@@ -1,0 +1,33 @@
+.features {
+  position: relative;
+}
+
+.layout-block-inner.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.card {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  background: rgba(239, 239, 239, 0.8);
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.card.current {
+  opacity: 1;
+  z-index: 10;
+}
+
+.card-inner {
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  margin-bottom: 2rem;
+}
