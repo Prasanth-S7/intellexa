@@ -12,22 +12,22 @@ const CardStack = ({ horizontalScrollRef }) => {
 
   useGSAP(() => {
     if (typeof window === 'undefined') return;
-    if (!horizontalScrollRef.current) return;
+    // if (!horizontalScrollRef.current) return;
 
     gsap.set(cardsRef.current, {
       x: () => window.innerWidth, 
       y: () => window.innerHeight,
-      opacity: 0,
+      opacity: 1,
     });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: "bottom center", 
+        start: "top top", 
         end: () => `+=${cardsRef.current.length * 300}`, 
         scrub: 1,
         pin: sectionRef.current,
-        pinSpacer:false,
+        pinSpacing: true,
         markers: true, 
       },
     });
@@ -52,9 +52,9 @@ const CardStack = ({ horizontalScrollRef }) => {
 
   return (
     <section
-      className="relative w-full md:mt-[1100px] h-screen pt-0 overflow-hidden px-5"
-      ref={sectionRef}
-    > hithere
+      className="w-full md:mt-[1100px] pt-0 min-h-screen overflow-hidden px-5"
+    >
+      <div ref={sectionRef} className='h-full'>
       {cards.map((_, index) => (
         <div
           key={index}
@@ -67,6 +67,7 @@ const CardStack = ({ horizontalScrollRef }) => {
           Card {index + 1}
         </div>
       ))}
+      </div>
     </section>
   );
 };

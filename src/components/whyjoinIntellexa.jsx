@@ -40,6 +40,7 @@ export const TeamSpotlight = () => {
       scrollTrigger: {
         trigger: triggerSection.current,
         pin: true,
+        pinSpacing:true,
         start: "top 12%",
         end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth}`,
         scrub: 1,
@@ -79,9 +80,9 @@ export const TeamSpotlight = () => {
           </div>
         </div>
       </section>
-        <section className="team-spotlight overflow-hidden h-screen" ref={mainRef}>
+        {/* <section className="team-spotlight overflow-hidden h-screen" ref={mainRef}>
           <CardStack horizontalScrollRef={horizontalScrollRef} />
-        </section>
+        </section> */}
     </div>
   );
 };
