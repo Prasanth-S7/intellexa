@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HorizontalScroll } from "./horizontalScroll";
 import { Footer } from "./footer";
 import { useGSAP } from "@gsap/react";
+import { CardSpotlightDemo } from "./CardSpotlight";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,11 +31,8 @@ export const TeamSpotlight = () => {
 
   useGSAP(() => {
     if (!isLargeScreen || !horizontalScrollRef.current) return;
-
-    // Cleanup previous ScrollTriggers
+    console.log("reaches this point")
     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-    // Set initial states
     gsap.set(cardsRef.current, {
       x: () => window.innerWidth,
       y: () => window.innerHeight,
@@ -71,15 +69,20 @@ export const TeamSpotlight = () => {
           });
 
           cardsRef.current.forEach((card, index) => {
+            const numCards = cardsRef.current.length;
+            const xPos = (window.innerWidth - 440 - 2 * 20) / (numCards - 1) * index;
+            const yPos = (window.innerHeight - 440 - 2 * 20) / (numCards - 1) * index;
+
             tl.to(card, {
-              x: 120 * index,
-              y: 30 * index,
+              x: xPos,
+              y: yPos,
               opacity: 1,
               duration: 2,
               ease: "power2.out",
               stagger: 0.3,
             });
           });
+
         },
       },
     });
@@ -114,19 +117,43 @@ export const TeamSpotlight = () => {
           </div>
         </div>
       </section>
-      <section className="border-2 border-pink-800 h-screen relative" ref={mainRef}>
-        {cards.map((_, index) => (
-          <div
-            key={index}
-            ref={(el) => (cardsRef.current[index] = el)}
-            className="card absolute w-[465px] h-[465px] bg-neutral-400 border mt-0 flex items-center justify-center shadow-lg"
-            style={{
-              zIndex: cards.length - index,
-            }}
-          >
-            Card {index + 1}
+      <section className="min-h-screen md:h-screen relative md:p-5" ref={mainRef}>
+        <div className="text-right justify-end absolute top-5 right-4 md:block hidden mt-10">
+          <div className="flex flex-col">
+            <h2 className=" font-slussen text-white text-left text-3xl md:text-5xl">TEAM</h2>
+            <h2 className=" font-slussen text-white text-3xl md:text-5xl">SPOTLIGHT</h2>
           </div>
-        ))}
+        </div>
+        <div className="md:block hidden">
+          {cards.map((_, index) => (
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full border mt-0 shadow-lg"
+              style={{
+                zIndex: cards.length + index,
+              }}
+            >
+              {/* Card {index + 1} */}
+              <CardSpotlightDemo index={index}></CardSpotlightDemo>
+            </div>
+          ))}
+        </div>
+        <div className="md:hidden block">
+          <div className="text-right flex justify-end mb-5 mt-7">
+            <div className="flex flex-col">
+              <h2 className=" font-slussen text-white text-left text-3xl">TEAM</h2>
+              <h2 className=" font-slussen text-white text-3xl">SPOTLIGHT</h2>
+            </div>
+          </div>
+          {Array.from({ length: 9 }).map((_, index) => (
+            <CardSpotlightDemo
+              key={index}
+              className="mb-4 border-2 border-white"
+              index={index + 1}
+            />
+          ))}
+        </div>
       </section>
       <section>
         <Footer></Footer>
