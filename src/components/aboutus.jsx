@@ -3,11 +3,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import SplitText from 'gsap-trial/SplitText'
-import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(SplitText)
 
 export const AboutUs = ({ heroRef }) => {
     const resizeTimeout = useRef(null); // For debouncing
