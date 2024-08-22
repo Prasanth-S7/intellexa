@@ -2,7 +2,6 @@ import { HeroSectionClient } from '@/components/heroSection';
 import { TeamSpotlight } from '@/components/whyjoinIntellexa';
 import { Footer } from '@/components/footer';
 // import { FeatureCards } from '@/components/feature-cards';
-import CardStack from '@/components/teamSpotlight';
 
 export default function Home() {
   return (
@@ -11,13 +10,11 @@ export default function Home() {
       <section className='overflow-hidden'>
         <TeamSpotlight />
       </section>
-      <section>
+      {/* <section>
         <CardStack />
-      </section>
-      <section>
-        <Footer />
-      </section>
+      </section> */}
       {/* <FeatureCards /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
