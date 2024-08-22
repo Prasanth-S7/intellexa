@@ -14,7 +14,7 @@ export const TeamSpotlight = () => {
   const triggerSection = useRef(null);
   const cardsRef = useRef([]);
   const mainRef = useRef(null);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const [created, setCreated] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export const TeamSpotlight = () => {
       setIsLargeScreen(window.innerWidth > 768);
       ScrollTrigger.refresh();
     };
+    handleResize();
 
     window.addEventListener('resize', handleResize);
     return () => {
