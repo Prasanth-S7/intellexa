@@ -53,7 +53,7 @@ export const TeamSpotlight = () => {
         markers: true,
         onLeave: () => {
           if (tl) {
-            tl.kill(); // Kill existing timeline if it exists
+            tl.kill();
           }
           setCreated(true);
           console.log("runs");
@@ -63,7 +63,7 @@ export const TeamSpotlight = () => {
               start: "top top",
               end: () => `+=${cardsRef.current.length * 300}`,
               scrub: 1,
-              pin: true, // Pin the section
+              pin: true,
               markers: true,
             },
           });
@@ -88,8 +88,8 @@ export const TeamSpotlight = () => {
     });
 
     return () => {
-      horizontalScrollTimeline.kill(); // Kill horizontal scroll timeline
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Kill all ScrollTriggers
+      horizontalScrollTimeline.kill();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       ScrollTrigger.refresh();
     };
   }, [isLargeScreen]);
