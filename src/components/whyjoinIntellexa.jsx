@@ -13,7 +13,8 @@ export const TeamSpotlight = () => {
   const triggerSection = useRef(null);
   const cardsRef = useRef([]);
   const mainRef = useRef(null);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
+  const [created, setCreated] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,9 +22,7 @@ export const TeamSpotlight = () => {
       ScrollTrigger.refresh();
     };
 
-    handleResize();
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -31,32 +30,42 @@ export const TeamSpotlight = () => {
 
   useGSAP(() => {
     if (!isLargeScreen || !horizontalScrollRef.current) return;
+
+    // Cleanup previous ScrollTriggers
     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    // Set initial states
     gsap.set(cardsRef.current, {
       x: () => window.innerWidth,
       y: () => window.innerHeight,
       opacity: 0,
     });
+
+    let tl = null;
+
     const horizontalScrollTimeline = gsap.to(horizontalScrollRef.current, {
       x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
       ease: "none",
       scrollTrigger: {
         trigger: triggerSection.current,
         pin: true,
-        pinSpacing: true,
         start: "top 12%",
         end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth}`,
         scrub: 1,
         markers: true,
         onLeave: () => {
-          const tl = gsap.timeline({
+          if (tl) {
+            tl.kill(); // Kill existing timeline if it exists
+          }
+          setCreated(true);
+          console.log("runs");
+          tl = gsap.timeline({
             scrollTrigger: {
               trigger: mainRef.current,
               start: "top top",
               end: () => `+=${cardsRef.current.length * 300}`,
               scrub: 1,
               pin: true, // Pin the section
-              pinSpacing: true,
               markers: true,
             },
           });
@@ -76,8 +85,9 @@ export const TeamSpotlight = () => {
     });
 
     return () => {
-      horizontalScrollTimeline.kill();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      horizontalScrollTimeline.kill(); // Kill horizontal scroll timeline
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Kill all ScrollTriggers
+      ScrollTrigger.refresh();
     };
   }, [isLargeScreen]);
 
