@@ -51,7 +51,7 @@ export const TeamSpotlight = () => {
         start: "top 12%",
         end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth}`,
         scrub: 1,
-        markers: true,
+        markers: false,
         onLeave: () => {
           if (tl) {
             tl.kill();
@@ -65,7 +65,7 @@ export const TeamSpotlight = () => {
               end: () => `+=${cardsRef.current.length * 300}`,
               scrub: 1,
               pin: true,
-              markers: true,
+              markers: false,
             },
           });
 
