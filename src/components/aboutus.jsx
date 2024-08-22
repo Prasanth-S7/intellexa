@@ -3,8 +3,11 @@ import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import SplitText from 'gsap-trial/SplitText'
+import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText)
 
 export const AboutUs = ({ heroRef }) => {
     const resizeTimeout = useRef(null); // For debouncing
@@ -15,13 +18,14 @@ export const AboutUs = ({ heroRef }) => {
     const scrollTriggerRef = useRef(null);
 
     useEffect(() => {
+
         if (typeof window !== 'undefined') {
             const handleResize = () => {
                 clearTimeout(resizeTimeout.current);
                 resizeTimeout.current = setTimeout(() => {
                     setIsLargeScreen(window.innerWidth > 768);
-                    ScrollTrigger.refresh(); // Refresh ScrollTrigger on resize
-                }, 150); // Adjust the debounce delay as needed
+                    ScrollTrigger.refresh();
+                }, 150);
             };
 
             handleResize();
@@ -32,7 +36,7 @@ export const AboutUs = ({ heroRef }) => {
                 window.removeEventListener('resize', handleResize);
             };
         }
-        
+
     }, []);
 
     useGSAP(() => {
@@ -66,10 +70,10 @@ export const AboutUs = ({ heroRef }) => {
         };
     }, [isLargeScreen]);
     return (
-        <section className="md:mx-[15%] mx-[10%] md:flex justify-between text-white md:mb-[300px] mb-[100px]">
+        <section id='about-us' className=" md:mx-[15%] mx-[10%] md:flex justify-between text-white md:mb-[300px] mb-[100px]">
             <div className="md:flex md:space-x-[15%]">
                 <div className="space-x-14 text-6xl flex-col justify-start">
-                    <div className="px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
+                    <div className="word px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
                         ABOUT US
                     </div>
                 </div>

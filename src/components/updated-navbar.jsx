@@ -11,11 +11,11 @@ export function FloatingNavDemo() {
         },
         {
             name: "About",
-            link: "/about",
+            link: "#about-us",
         },
         {
             name: "Team",
-            link: "/team",
+            link: "#team",
         },
         {
             name: "Events",
@@ -27,7 +27,7 @@ export function FloatingNavDemo() {
         },
         {
             name: "Contact",
-            link: "/contact",
+            link: "#footer",
         },
     ];
 

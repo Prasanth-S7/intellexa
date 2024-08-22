@@ -118,7 +118,7 @@ export const TeamSpotlight = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-screen md:h-screen relative md:p-5" ref={mainRef}>
+      <section id="team" className="min-h-screen md:h-screen relative md:p-5" ref={mainRef}>
         <div className="text-right justify-end absolute top-5 right-4 md:block hidden mt-10">
           <div className="flex flex-col">
             <h2 className=" font-slussen text-white text-left text-3xl md:text-5xl">TEAM</h2>
