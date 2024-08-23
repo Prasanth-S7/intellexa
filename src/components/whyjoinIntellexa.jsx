@@ -95,7 +95,44 @@ export const TeamSpotlight = () => {
     };
   }, [isLargeScreen]);
 
-  const cards = Array(9).fill(null);
+  const cards = [
+    {
+      teamName: "IoT Team",
+      description: "Develops innovative IoT solutions, connecting devices to enhance user experiences. Transforms everyday objects into intelligent, interconnected technologies."
+    },
+    {
+      teamName: "Algorithms Engineering Team",
+      description: "Designs efficient algorithms to solve complex problems and optimize performance. Builds robust, scalable tech solutions through expert algorithm development."
+    },
+    {
+      teamName: "Media Team",
+      description: "Captures the club's passion with stunning visuals and engaging content. Shares the club's story with the world, showcasing its vibrant spirit."
+    },
+    {
+      teamName: "Event Team",
+      description: "Creates unforgettable events that define the club's memorable moments. Plans and executes impactful events, leaving lasting impressions."
+    },
+    {
+      teamName: "Business Communication Team",
+      description: "Enhances essential communication skills for effective collaboration and pitching. Develops strong relationship-building and public speaking abilities."
+    },
+    {
+      teamName: "Design Team",
+      description: "Brings the club's vision to life with innovative and engaging visuals. Crafts the visual identity of the club, representing its unique spirit."
+    },
+    {
+      teamName: "Content Team",
+      description: "Delivers compelling articles and social media posts that capture the club's essence. Ensures messages are engaging and convincing, immersing the audience."
+    },
+    {
+      teamName: "Creative Team",
+      description: "Generates fresh, innovative ideas to set the club apart. Develops new concepts and solutions, driving the club forward."
+    },
+    {
+      teamName: "Public Relations Team",
+      description: "Amplifies the club's reach by showcasing team efforts and accomplishments. Increases awareness and binds the club together with effective outreach."
+    }
+  ];
 
   return (
     <div>
@@ -126,7 +163,7 @@ export const TeamSpotlight = () => {
           </div>
         </div>
         <div className="md:block hidden">
-          {cards.map((_, index) => (
+          {cards.map(({ teamName, description }, index) => (
             <div
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
@@ -135,10 +172,10 @@ export const TeamSpotlight = () => {
                 zIndex: cards.length + index,
               }}
             >
-              {/* Card {index + 1} */}
-              <CardSpotlightDemo index={index}></CardSpotlightDemo>
+              <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>
             </div>
           ))}
+
         </div>
         <div className="md:hidden block">
           <div className="text-right flex justify-end mb-5 mt-7">
@@ -151,7 +188,7 @@ export const TeamSpotlight = () => {
             <CardSpotlightDemo
               key={index}
               className="mb-4 border-2 border-white"
-              index={index + 1}
+              index={index}
             />
           ))}
         </div>
