@@ -185,13 +185,12 @@ export const TeamSpotlight = () => {
             </div>
           </div>
           {cards.map(({ teamName, description }, index) => (
-            <div
+            <CardSpotlightDemo
               key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
+              teamName={teamName} description={description}
               className="mb-4 border-2 border-white"
-            >
-              <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>
-            </div>
+              index={index}
+            />
           ))}
         </div>
       </section>
