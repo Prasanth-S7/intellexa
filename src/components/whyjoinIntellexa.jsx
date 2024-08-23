@@ -184,17 +184,12 @@ export const TeamSpotlight = () => {
               <h2 className=" font-slussen text-white text-3xl">SPOTLIGHT</h2>
             </div>
           </div>
-          {cards.map(({ teamName, description }, index) => (
-            <div
+          {Array.from({ length: 9 }).map((_, index) => (
+            <CardSpotlightDemo
               key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
-              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full border mt-0 shadow-lg"
-              style={{
-                zIndex: cards.length + index,
-              }}
-            >
-              <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>
-            </div>
+              className="mb-4 border-2 border-white"
+              index={index}
+            />
           ))}
         </div>
       </section>
