@@ -1,30 +1,34 @@
 import './instagram.css'
+import Image from 'next/image'
+import logo from "@/assets/logo-black.png"
 export const Instagram = (() => {
     return (
-        <div class="tooltip-container">
-            <div class="tooltip">
-                <div class="profile">
-                    <div class="user">
-                        <div class="img">Ui</div>
-                        <div class="details">
+        <div className="tooltip-container">
+            <div className="tooltip">
+                <div className="profile">
+                    <div className="user">
+                        <div className="img overflow-hidden">
+                            <Image src={logo} alt="logo" className="rounded-lg scale-125" />
+                        </div>
+                        <div className="details">
                             <div className="name font-slussenLight text-base">INTELLEXA_REC</div>
                             <div className="username font-slussenLight text-sm">@intellexa.rec</div>
                         </div>
                     </div>
-                    <div class="about">200+ Followers</div>
+                    <div className="about">200+ Followers</div>
                 </div>
             </div>
-            <div class="text">
-                <a class="icon" href="#">
-                    <div class="layer">
+            <div className="text">
+                <a className="icon" href="https://www.instagram.com/intellexa.rec/">
+                    <div className="layer">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span class="instagramSVG">
+                        <span className="instagramSVG">
                             <svg
                                 fill="white"
-                                class="svgIcon"
+                                className="svgIcon"
                                 viewBox="0 0 448 512"
                                 height="1.5em"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +39,7 @@ export const Instagram = (() => {
                             </svg>
                         </span>
                     </div>
-                    <div class="text">Instagram</div>
+                    <div className="text">Instagram</div>
                 </a>
             </div>
         </div>

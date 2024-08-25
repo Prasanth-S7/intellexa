@@ -22,10 +22,6 @@ export function FloatingNavDemo() {
             link: "/events",
         },
         {
-            name: "Projects",
-            link: "/projects",
-        },
-        {
             name: "Contact",
             link: "#footer",
         },
