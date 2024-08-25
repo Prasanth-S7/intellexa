@@ -10,11 +10,6 @@ export default function Home() {
       <section className='overflow-hidden'>
         <TeamSpotlight />
       </section>
-      {/* <section>
-        <CardStack />
-      </section> */}
-      {/* <FeatureCards /> */}
-      {/* <Footer /> */}
     </div>
   );
 }
