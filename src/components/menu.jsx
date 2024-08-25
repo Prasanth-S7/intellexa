@@ -32,7 +32,7 @@ const Menu = ({navItems}) => {
               {navItems.map((link, index) => (
                 <div className="menu-link-item" key={index}>
                   <div className="menu-link-item-holder mb-9">
-                    <Link href={link.link} className="menu-link text-xl font-slussenLight hover:underline ml-3 mb-12">
+                    <Link href={link.link} className="menu-link text-xl font-slussenLight hover:underline ml-3 mb-12" onClick={()=>setIsMenuOpen(false)}>
                       {link.name}
                     </Link>
                   </div>
