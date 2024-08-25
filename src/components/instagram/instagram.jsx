@@ -8,7 +8,7 @@ export const Instagram = (() => {
                         <div class="img">Ui</div>
                         <div class="details">
                             <div className="name font-slussenLight text-base">INTELLEXA_REC</div>
-                            <div class="username font-slussenLight text-sm">@intellexa.rec</div>
+                            <div className="username font-slussenLight text-sm">@intellexa.rec</div>
                         </div>
                     </div>
                     <div class="about">200+ Followers</div>
