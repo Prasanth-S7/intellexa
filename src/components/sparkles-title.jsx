@@ -16,7 +16,7 @@ export function SparklesTitle() {
                     <div className="text-[#1a23ff]">INTELLEXA</div>
                 </div>
             </h1>
-            <div className="w-full h-40 relative">
+            <div className="w-full h-40 relative md:block hidden">
                 {/* Gradients */}
                 {/* <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
                 <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
