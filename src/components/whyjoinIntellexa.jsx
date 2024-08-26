@@ -175,7 +175,7 @@ export const TeamSpotlight = () => {
             <div
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full border mt-0 shadow-lg"
+              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full border border-white/[0.2] mt-0 shadow-lg"
               style={{
                 zIndex: cards.length + index,
               }}
