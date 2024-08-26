@@ -185,7 +185,7 @@ export const TeamSpotlight = () => {
           ))}
 
         </div>
-        <div className="md:hidden block">
+        <div className="md:hidden block px-5">
           <div className="text-right flex justify-end mb-5 mt-7">
             <div className="flex flex-col">
               <h2 className=" font-slussen text-white text-left text-3xl">TEAM</h2>
@@ -196,7 +196,7 @@ export const TeamSpotlight = () => {
             <CardSpotlightDemo
               key={index}
               teamName={teamName} description={description}
-              className="mb-4 border-2 border-white"
+              className="mb-4 border border-white/[0.2] mx-0 w-full"
               index={index}
             />
           ))}
