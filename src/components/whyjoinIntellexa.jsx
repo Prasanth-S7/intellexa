@@ -19,113 +19,82 @@ export const TeamSpotlight = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if(window.innerWidth < 768) {
-      }
       setIsLargeScreen(window.innerWidth > 768);
-  
-      // Debounce the resize handler to avoid multiple calls
-      clearTimeout(window.resizeTimeout);
-      window.resizeTimeout = setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 200);
+      ScrollTrigger.refresh();
     };
-  
     handleResize();
-  
+
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
-      clearTimeout(window.resizeTimeout);
     };
   }, []);
-  
+
   useGSAP(() => {
+    if (!isLargeScreen || !horizontalScrollRef.current) return;
+    console.log("reaches this point")
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    gsap.set(cardsRef.current, {
+      x: () => window.innerWidth,
+      y: () => window.innerHeight,
+      opacity: 0,
+    });
+
     let tl = null;
-  
-    // Function to reinitialize GSAP animations
-    const reinitializeAnimation = () => {
-      // Kill any existing ScrollTriggers and timelines
+
+    const horizontalScrollTimeline = gsap.to(horizontalScrollRef.current, {
+      x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
+      ease: "none",
+      scrollTrigger: {
+        trigger: triggerSection.current,
+        pin: true,
+        start: "top 12%",
+        end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth}`,
+        scrub: 1,
+        markers: false,
+        onLeave: () => {
+          if (tl) {
+            tl.kill();
+          }
+          setCreated(true);
+          console.log("runs");
+          tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: mainRef.current,
+              start: "top top",
+              end: () => `+=${cardsRef.current.length * 300}`,
+              scrub: 1,
+              pin: true,
+              markers: false,
+            },
+          });
+
+          cardsRef.current.forEach((card, index) => {
+            const numCards = cardsRef.current.length;
+            const xPos = (window.innerWidth - 440 - 2 * 20) / (numCards - 1) * index;
+            const yPos = (window.innerHeight - 440 - 2 * 20) / (numCards - 1) * index;
+
+            tl.to(card, {
+              x: xPos,
+              y: yPos,
+              opacity: 1,
+              duration: 2,
+              ease: "power2.out",
+              stagger: 0.3,
+            });
+          });
+
+        },
+      },
+    });
+
+    return () => {
+      horizontalScrollTimeline.kill();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      if (tl) {
-        tl.kill();
-      }
-  
-      // Set initial card positions for animation
-      gsap.set(cardsRef.current, {
-        x: () => window.innerWidth,
-        y: () => window.innerHeight,
-        opacity: 0,
-      });
-  
-      if (isLargeScreen && horizontalScrollRef.current) {
-        const horizontalScrollTimeline = gsap.to(horizontalScrollRef.current, {
-          x: () => -(horizontalScrollRef.current.offsetWidth - window.innerWidth) - 700,
-          ease: "none",
-          scrollTrigger: {
-            trigger: triggerSection.current,
-            pin: true,
-            start: "top 12%",
-            end: () => `+=${horizontalScrollRef.current.offsetWidth - window.innerWidth}`,
-            scrub: 1,
-            markers: false,
-            onLeave: () => runOnLeaveTimeline(),
-          },
-        });
-  
-        return () => {
-          horizontalScrollTimeline.kill();
-          ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
-      } else {
-        runOnLeaveTimeline(); // Directly run the timeline if no horizontal scroll
-      }
-  
-      // Refresh ScrollTrigger manually
       ScrollTrigger.refresh();
     };
-  
-    const runOnLeaveTimeline = () => {
-      console.log(tl)
-      if (tl) {
-        tl.kill();
-      }
-      setCreated(true);
-  
-      tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: mainRef.current,
-          start: "top top",
-          end: () => `+=${cardsRef.current.length * 300}`,
-          scrub: 1,
-          pin: true,
-          markers: false,
-        },
-      });
-  
-      cardsRef.current.forEach((card, index) => {
-        const numCards = cardsRef.current.length;
-        const xPos = (window.innerWidth - 440 - 2 * 20) / (numCards - 1) * index;
-        const yPos = (window.innerHeight - 440 - 2 * 20) / (numCards - 1) * index;
-  
-        tl.to(card, {
-          x: xPos,
-          y: yPos,
-          opacity: 1,
-          duration: 2,
-          ease: "power2.out",
-          stagger: 0.3,
-        });
-      });
-    };
-  
-    // Delay the reinitialization to ensure everything resets correctly
-    setTimeout(() => {
-      reinitializeAnimation();
-    }, 100); // Adjust this delay if necessary
-  
-  }, [isLargeScreen, horizontalScrollRef, triggerSection, mainRef, cardsRef]);
-  
-  
+  }, [isLargeScreen]);
+
   const cards = [
     {
       teamName: "IoT Team",
@@ -193,30 +162,22 @@ export const TeamSpotlight = () => {
             <h2 className=" font-slussen text-white text-3xl md:text-5xl">SPOTLIGHT</h2>
           </div>
         </div>
-        <div className="">
-          <div className="">
-            <div className="md:hidden text-right flex justify-end mb-5 mt-7">
-              <div className="flex flex-col">
-                <h2 className=" font-slussen text-white text-left text-3xl">TEAM</h2>
-                <h2 className=" font-slussen text-white text-3xl">SPOTLIGHT</h2>
-              </div>
+        <div className="md:block hidden">
+          {cards.map(({ teamName, description }, index) => (
+            <div
+              key={index}
+              ref={(el) => (cardsRef.current[index] = el)}
+              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full border mt-0 shadow-lg"
+              style={{
+                zIndex: cards.length + index,
+              }}
+            >
+              <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>
             </div>
-            {cards.map(({ teamName, description }, index) => (
-              <div
-                key={index}
-                ref={(el) => (cardsRef.current[index] = el)}
-                className="card absolute md:w-[465px] md:h-[465px] h-[400px] w-full border mt-0 shadow-lg"
-                style={{
-                  zIndex: cards.length + index,
-                }}
-              >
-                <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>
-              </div>
-            ))}
-          </div>
+          ))}
 
-          </div>
-          {/* <div className="md:hidden block">
+        </div>
+        <div className="md:hidden block">
           <div className="text-right flex justify-end mb-5 mt-7">
             <div className="flex flex-col">
               <h2 className=" font-slussen text-white text-left text-3xl">TEAM</h2>
@@ -231,7 +192,7 @@ export const TeamSpotlight = () => {
               index={index}
             />
           ))}
-        </div> */}
+        </div>
       </section>
       <section>
         <Footer></Footer>
