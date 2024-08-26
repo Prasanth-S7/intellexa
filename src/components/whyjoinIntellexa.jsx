@@ -131,7 +131,15 @@ export const TeamSpotlight = () => {
     {
       teamName: "Public Relations Team",
       description: "Amplifies the club's reach by showcasing team efforts and accomplishments. Increases awareness and binds the club together with effective outreach."
-    }
+    },
+    {
+      teamName: "Web Development Team",
+      description: "Builds and maintains the club's digital presence. Crafts user-friendly, responsive websites and platforms, ensuring smooth navigation and a seamless user experience."
+    },
+    {
+      teamName: "AI Engineering Team",
+      description: "Designs and implements AI-driven solutions. Develops intelligent systems that enhance the club's projects, pushing the boundaries of innovation and automation."
+    },
   ];
 
   return (
