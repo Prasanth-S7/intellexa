@@ -3,10 +3,10 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 export function CardSpotlightDemo({ teamName, description, index, className }) {
   return (
     <CardSpotlight className={`h-full w-full ${className}`}>
-      <div className={`h-[400px] md:w-full md:h-full flex flex-col justify-between `} >
-        <div className="text-custom-yellow lg:text-5xl md:text-5xl text-4xl font-slussen text-right z-50">{index + 1}</div>
-        <div className="text-custom-yellow lg:text-4xl md:text-4xl text-3xl font-slussen z-50">{teamName}</div>
-        <div className="text-neutral-300 text-[20px] font-slussenLight z-50">{description}</div>
+      <div className={`h-[300px] md:w-full md:h-full flex flex-col justify-between `} >
+        <div className="text-custom-yellow lg:text-5xl md:text-5xl text-3xl font-slussen text-right z-50">{index + 1}</div>
+        <div className="text-custom-yellow lg:text-4xl md:text-4xl text-2xl font-slussen z-50">{teamName}</div>
+        <div className="text-neutral-300 md:text-[20px] text-[18px] font-slussenLight z-50">{description}</div>
       </div>
     </CardSpotlight>
   );
