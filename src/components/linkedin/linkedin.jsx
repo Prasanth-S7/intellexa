@@ -12,7 +12,7 @@ export const Linkedin = (() => {
                         </div>
                         <div className="userDetails">
                             <div className="userName font-slussenLight text-base">INTELLEXA_REC</div>
-                            <div className="userHandle font-slussenLight text-sm">@username</div>
+                            <div className="userHandle font-slussenLight text-sm">Intellexa REC</div>
                         </div>
                     </div>
                     <div className="userConnections">50+ Followers</div>
