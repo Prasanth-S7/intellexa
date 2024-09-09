@@ -22,7 +22,7 @@ export const AboutUs = ({ heroRef }) => {
                 resizeTimeout.current = setTimeout(() => {
                     setIsLargeScreen(window.innerWidth > 768);
                     ScrollTrigger.refresh();
-                }, 150);
+                }, 10);
             };
 
             handleResize();
