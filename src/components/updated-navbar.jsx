@@ -22,6 +22,10 @@ export function FloatingNavDemo() {
             link: "/events",
         },
         {
+            name: "Wall Of Fame",
+            link: "/walloffame",
+        },
+        {
             name: "Contact",
             link: "#footer",
         },

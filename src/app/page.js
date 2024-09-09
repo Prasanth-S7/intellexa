@@ -8,17 +8,6 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 export default function Home() {
   return (
     <div>
-      <AnimatedCursor
-        innerSize={20}
-        outerSize={15}
-        color='146, 8, 255'
-        outerAlpha={0.2}
-        innerScale={0.7}
-        hasBlendMode={true}
-        outerScale={5}
-        outerStyle={{
-          mixBlendMode: 'exclusion'
-        }} />
       <HeroSectionClient />
       <section className='overflow-hidden'>
         <TeamSpotlight />

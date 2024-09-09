@@ -3,11 +3,13 @@ import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import SplitText from 'gsap-trial/SplitText';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export const AboutUs = ({ heroRef }) => {
-    const resizeTimeout = useRef(null); // For debouncing
+    const resizeTimeout = useRef(null);
+    const splittext = useRef(null);
     const [isLargeScreen, setIsLargeScreen] = useState(false);
     const leftSection = useRef(null);
     const rightSection = useRef(null);
@@ -36,9 +38,26 @@ export const AboutUs = ({ heroRef }) => {
 
     }, []);
 
+
     useGSAP(() => {
+        // let splitText = new SplitText(splittext.current, { type: 'chars' });
+        // let chars = splitText.chars;
+
+        // gsap.from(chars, {
+        //     scale: 0.8,   
+        //     opacity: 0,   
+        //     stagger: 0.05,
+        //     ease: 'power2.out',
+        //     duration: 1,
+        //     scrollTrigger: {
+        //         trigger: splittext.current,
+        //         start: 'top 80%',
+        //         markers: true,
+        //     }
+        // });
+
         if (!isLargeScreen) {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Kill all ScrollTriggers if screen is small
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             return;
         }
 
@@ -47,6 +66,8 @@ export const AboutUs = ({ heroRef }) => {
         const right = rightSection.current;
         const last = lastLoremDiv.current;
         const hero = heroRef.current;
+
+
 
         if (left && right && last && hero) {
             gsap.to(left, {
@@ -61,7 +82,6 @@ export const AboutUs = ({ heroRef }) => {
             });
         }
 
-        // Cleanup ScrollTriggers on component unmount or when resizing
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
@@ -70,8 +90,8 @@ export const AboutUs = ({ heroRef }) => {
         <section id='about-us' className=" md:mx-[15%] mx-[10%] md:flex justify-between text-white md:mb-[300px] mb-[100px]">
             <div className="md:flex md:space-x-[15%]">
                 <div className="space-x-14 text-6xl flex-col justify-start">
-                    <div className="word px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold border-l-4 pl-5 font-slussen" ref={leftSection}>
-                        ABOUT US
+                    <div className="word px-[5px] text-white lg:text-6xl md:text-4xl text-4xl font-bold  font-slussen" ref={leftSection}>
+                        <span className="text-nowrap inline-block text-white w-full border-l-4 pl-5 py-3" ref={splittext}>ABOUT <br />US</span>
                     </div>
                 </div>
                 <div className="md:flex-col w-full mt-[40%] overflow-y-auto" ref={rightSection}>
