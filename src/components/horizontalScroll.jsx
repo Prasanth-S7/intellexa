@@ -1,12 +1,8 @@
 export const HorizontalScroll = (({ number, info, className }) => {
     return (
-        <div className={`relative w-full h-[400px] md:h-[400px] md:w-[400px] border border-white/[0.2] rounded-md px-7 py-7 flex flex-col justify-between ${className}`}>
-            <div className="text-custom-yellow lg:text-5xl md:text-5xl text-4xl font-slussen">{number}</div>
-            <div className="text-white text-[20px] font-slussenLight">{info}</div>
-
-            {/* Green Glowing Semicircle */}
+        <div className={`w-full h-[400px] md:h-[400px] md:w-[400px] border border-white/[0.2] rounded-md px-7 py-7 flex flex-col justify-between ${className}`} >
+            <div className="text-custom-yellow lg:text-5xl md:text-5xl text-4xl font-slussen ">{number}</div>
+            <div className="text-white text-[20px] font-slussenLight ">{info}</div>
         </div>
-
-
     )
 })
