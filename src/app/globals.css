@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-    overflow-x: hidden;
     --background: 0 0% 0%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -60,9 +59,20 @@
   }
 
   /* Global Scrollbar Styles */
-  html {
+  /* html {
     scrollbar-width: auto;
     scrollbar-color: #faffcc var(--background);
+  } */
+
+  .canvas-container {
+    overflow: hidden;
+    height: calc(100vh - 1px); 
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    position: fixed; 
+    top: 0;
+    left: 0;
   }
 
   ::-webkit-scrollbar {
@@ -80,6 +90,19 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #faffcc;
   }
+  
+  
+  .canvas-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .canvas-container {
+    scrollbar-width: none; 
+  }
+  
+  .canvas-container {
+    -ms-overflow-style: none;  
+  }
 }
 
 
@@ -90,8 +113,10 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
+
 
 @font-face {
   font-family: 'Slussen';
@@ -107,21 +132,19 @@
   font-family: 'Slussen', sans-serif;
   /* color: white; */
 }
-
-
 .uiverse {
   --duration: 7s;
   --easing: linear;
-  --c-color-1: rgba(27, 161, 226, .7); /* Dark Neon Blue */
-  --c-color-2: #1a23ff; /* Dark Neon Blue */
-  --c-color-3: #7a42f4; /* Light Purple */
-  --c-color-4: rgba(100, 149, 237, .7); /* Light Accent Blue */
-  --c-shadow: #1a23ff;
-  --c-shadow-inset-top: #1a23ff;
-  --c-shadow-inset-bottom:  rgba(27, 161, 226, .7);
-  --c-radial-inner:#7a42f4 #1a23ff;
-  --c-radial-outer: rgba(100, 149, 237, .7);
-  --c-color: #fff;
+  --c-color-1: rgba(191, 127, 255, 0.7); /* Light Lavender */
+  --c-color-2: #9a66d2; /* Light Purple */
+  --c-color-3: #d4b2f1; /* Lighter Purple */
+  --c-color-4: rgba(221, 160, 221, 0.7); /* Light Violet */
+  --c-shadow: #9a66d2; /* Light Purple */
+  --c-shadow-inset-top: #9a66d2; /* Light Purple */
+  --c-shadow-inset-bottom: rgba(191, 127, 255, 0.7); /* Light Lavender */
+  --c-radial-inner: #d4b2f1 #9a66d2; /* Lighter Purple */
+  --c-radial-outer: rgba(221, 160, 221, 0.7); /* Light Violet */
+  --c-color: #fff; /* Text color */
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
   outline: none;
@@ -141,7 +164,6 @@
   background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
   box-shadow: 0 0 14px var(--c-shadow);
 }
-
 
 .uiverse:before {
   content: '';
@@ -367,30 +389,86 @@
 
 @keyframes circle-10 {
   33% {
-    transform: translate(68px, 20px) translateZ(0);
+    transform: translate(16px, 24px) translateZ(0);
   }
 
   66% {
-    transform: translate(100px, 28px) translateZ(0);
+    transform: translate(72px, -8px) translateZ(0);
   }
 }
 
 @keyframes circle-11 {
   33% {
-    transform: translate(4px, 4px) translateZ(0);
+    transform: translate(12px, 20px) translateZ(0);
   }
 
   66% {
-    transform: translate(68px, 20px) translateZ(0);
+    transform: translate(16px, -28px) translateZ(0);
   }
 }
 
 @keyframes circle-12 {
   33% {
-    transform: translate(56px, 0px) translateZ(0);
+    transform: translate(64px, -4px) translateZ(0);
   }
 
   66% {
-    transform: translate(60px, -32px) translateZ(0);
+    transform: translate(88px, 12px) translateZ(0);
   }
 }
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 1.5s infinite alternate;
+}
+
+.star:nth-child(odd) {
+  width: 2px;
+  height: 2px;
+}
+
+.star:nth-child(even) {
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Positioning the stars randomly */
+.star {
+  top: calc(100% * var(--y));
+  left: calc(100% * var(--x));
+}
+
+:root {
+  --x: 0;
+  --y: 0;
+}
+
+.star:nth-child(1) { --x: 0.1; --y: 0.2; }
+.star:nth-child(2) { --x: 0.3; --y: 0.5; }
+.star:nth-child(3) { --x: 0.8; --y: 0.1; }
+.star:nth-child(4) { --x: 0.6; --y: 0.8; }
+.star:nth-child(5) { --x: 0.2; --y: 0.9; }
+/* Add more stars as needed */
+
+
+

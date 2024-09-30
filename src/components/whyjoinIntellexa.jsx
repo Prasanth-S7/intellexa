@@ -154,11 +154,11 @@ export const TeamSpotlight = () => {
           </div>
           <div className="" ref={horizontalScrollRef}>
             <div className="md:flex md:space-x-10 mx-0 overflow-hidden">
-              <HorizontalScroll number="01" className={`md:ml-[500px] md:mb-0 mb-6`} info="Work on cutting-edge projects across various domains, from IoT solutions to content creation, and gain hands-on experience working with real-world applications in technology" />
-              <HorizontalScroll number="02" className={`md:mb-0 mb-6`} info="Enhance your technical, creative, and communication skills through diverse team roles, challenging tasks, and projects, all preparing you for future career growth opportunities" />
-              <HorizontalScroll number="03" className={`md:mb-0 mb-6`} info="Join a vibrant community of passionate peers, collaborate with experts, and contribute to meaningful initiatives that have an impact on the world around you" />
-              <HorizontalScroll number="04" className={`md:mb-0 mb-6`} info="Participate in and organize impactful events that highlight your talents, foster creativity, and contribute to the lasting legacy of the club's initiatives and growth" />
-              <HorizontalScroll number="05" className={`md:mb-0 mb-6`} info="Build a strong professional network, improve your resume, and gain valuable, hands-on experience that will distinguish you in the competitive world of work" />
+              <HorizontalScroll number="01" className={`md:ml-[500px] md:mb-0 mb-6`} title="Cutting-edge Projects" info="Work on cutting-edge projects across various domains, from IoT solutions to content creation, and gain hands-on experience working with real-world applications in technology" />
+              <HorizontalScroll number="02" className={`md:mb-0 mb-6`} title="Skill Enhancement" info="Enhance your technical, creative, and communication skills through diverse team roles, challenging tasks, and projects, all preparing you for future career growth opportunities" />
+              <HorizontalScroll number="03" className={`md:mb-0 mb-6`} title="Community Collaboration" info="Join a vibrant community of passionate peers, collaborate with experts, and contribute to meaningful initiatives that have an impact on the world around you" />
+              <HorizontalScroll number="04" className={`md:mb-0 mb-6`} title="Impactful Events" info="Participate in and organize impactful events that highlight your talents, foster creativity, and contribute to the lasting legacy of the club's initiatives and growth" />
+              <HorizontalScroll number="05" className={`md:mb-0 mb-6`} title="Professional Networking" info="Build a strong professional network, improve your resume, and gain valuable, hands-on experience that will distinguish you in the competitive world of work" />
             </div>
           </div>
         </div>
@@ -175,9 +175,11 @@ export const TeamSpotlight = () => {
             <div
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full border border-white/[0.2] mt-0 shadow-lg"
+              className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full  mt-0 shadow-lg"
               style={{
                 zIndex: cards.length + index,
+                border: '1px solid rgb(140, 100, 220)',
+                boxShadow: '0 4px 8px rgba(140, 100, 220, 0.3)',
               }}
             >
               <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>

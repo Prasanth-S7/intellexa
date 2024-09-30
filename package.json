@@ -11,7 +11,8 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@radix-ui/react-icons": "^1.3.0",
-    "@react-three/fiber": "^8.17.5",
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.8",
     "@studio-freight/hamo": "^0.6.33",
     "@studio-freight/react-lenis": "^0.0.47",
     "@tsparticles/engine": "^3.5.0",
