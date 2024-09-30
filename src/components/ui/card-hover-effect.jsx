@@ -1,95 +1,116 @@
-"use client"
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
-export const HoverEffect = ({
-  items,
-  className
-}) => {
-  let [hoveredIndex, setHoveredIndex] = useState(null);
-
-  return (
-    (<div
-      className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10", className)}>
-      {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="relative group  block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}>
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block  rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }} />
+export const Card = ({ className, children }) => {
+    return (
+        <div
+            className={cn(
+                "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-white/[0.2] group-hover:border-slate-700 relative z-20",
+                className
             )}
-          </AnimatePresence>
-          <Card>
-            {item.eventImage && (
-              <Image
-                src={item.eventImage}
-                alt="Event Image"
-                width={500}
-                height={300}
-              />
-            )}
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
-            <p className="mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm">Event Status: {item.eventStatus}</p>
-          </Card>
-        </Link>
-      ))}
-    </div>)
-  );
+        >
+            <div className="relative z-50">
+                <div className="p-4">{children}</div>
+            </div>
+        </div>
+    );
 };
 
-export const Card = ({
-  className,
-  children
-}) => {
-  return (
-    (<div
-      className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        className
-      )}>
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
-      </div>
-    </div>)
-  );
+export const CardTitle = ({ className, children }) => {
+    return (
+        <h4 className={cn("text-[#9966CC] font-bold tracking-wide mt-4", className)}>
+            {children}
+        </h4>
+    );
 };
-export const CardTitle = ({
-  className,
-  children
-}) => {
-  return (
-    (<h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
-      {children}
-    </h4>)
-  );
+
+export const CardDescription = ({ className, children }) => {
+    return (
+        <p className={cn("mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
+            {children}
+        </p>
+    );
 };
-export const CardDescription = ({
-  className,
-  children
-}) => {
-  return (
-    (<p
-      className={cn("mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", className)}>
-      {children}
-    </p>)
-  );
+
+export const HoverEffect = ({ items, className }) => {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+
+    return (
+        <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-10", className)}>
+            {items.map((item, idx) => (
+                <div
+                    key={item?.title} // Using title for unique key
+                    className="relative group block p-2 h-full w-full"
+                    onMouseEnter={() => setHoveredIndex(idx)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                >
+                    <AnimatePresence>
+                        {hoveredIndex === idx && (
+                            <motion.span
+                                className="absolute inset-0 h-full w-full bg-slate-800/[0.8] block rounded-3xl"
+                                layoutId="hoverBackground"
+                                initial={{ opacity: 0 }}
+                                animate={{
+                                    opacity: 1,
+                                    transition: { duration: 0.3 },
+                                }}
+                                exit={{
+                                    opacity: 0,
+                                    transition: { duration: 0.3, delay: 0.2 },
+                                }}
+                            />
+                        )}
+                    </AnimatePresence>
+                    <Card>
+                        {item.eventImage && (
+                            <Image
+                                src={item.eventImage}
+                                alt="Event Image"
+                                width={500}
+                                height={300}
+                                className="rounded-lg"
+                            />
+                        )}
+                        <CardTitle>{item.title}</CardTitle>
+                        <CardDescription>{item.description}</CardDescription>
+                        <p className="mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm">
+                            Event Status: {item.eventStatus}
+                        </p>
+
+                        {/* Display event details for the hovered card */}
+                        {hoveredIndex === idx && (
+                            <div className="mt-4 text-zinc-200">
+                                <p className="text-sm"><strong>Date:</strong> {item.date}</p>
+                                <p className="text-sm"><strong>Venue:</strong> {item.venue}</p>
+                                <p className="text-sm"><strong>Timing:</strong> {item.timing}</p>
+                                {item.registerLink && (
+                                    <div className="flex justify-center mt-4">
+                                        <a href={item.registerLink} target="_blank" rel="noopener noreferrer" className="uiverse">
+                                            <div className="wrapper flex items-center justify-center space-x-2 relative">
+                                                <span>Register</span>
+                                                <div className="circle circle-12"></div>
+                                                <div className="circle circle-11"></div>
+                                                <div className="circle circle-10"></div>
+                                                <div className="circle circle-9"></div>
+                                                <div className="circle circle-8"></div>
+                                                <div className="circle circle-7"></div>
+                                                <div className="circle circle-6"></div>
+                                                <div className="circle circle-5"></div>
+                                                <div className="circle circle-4"></div>
+                                                <div className="circle circle-3"></div>
+                                                <div className="circle circle-2"></div>
+                                                <div className="circle circle-1"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </Card>
+                </div>
+            ))}
+        </div>
+    );
 };
