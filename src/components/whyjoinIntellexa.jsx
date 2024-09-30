@@ -147,7 +147,7 @@ export const TeamSpotlight = () => {
       <section className="md:mx-[15%] mx-[10%]" ref={triggerSection}>
         <div className="flex flex-col items-start">
           <div className="space-x-14 text-6xl flex-col justify-start mb-[8vh]">
-            <div className="px-[5px] lg:text-[8vh] md:text-4xl text-4xl text-white font-slussen font-bold border-l-4 pl-5 border-white leading-tight lg:leading-none">
+            <div className="px-[5px] lg:text-[8vh] md:text-5xl text-4xl text-white font-slussen font-bold border-l-4 pl-5 border-custom-purple leading-tight lg:leading-none">
               WHY JOIN<br />
               <span>INTELLEXA?</span>
             </div>

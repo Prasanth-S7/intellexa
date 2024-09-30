@@ -35,16 +35,16 @@ export const projects = [
     //     link: "#",
     //     eventStatus: "Coming Soon, Stay tuned",
     // },
-    {
-        title: "AI EVENT",
-        description:
-            "Join us for an insightful AI event focused on model building and accuracy techniques, essential for preparing for the upcoming AI challenge. This session aims to equip participants with key skills and insights that will enhance their performance and foster innovation.",
-        date: "September 30, 2024",
-        venue: "Online",
-        timing: "6:30 PM - 8:30 PM",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
-    },
+    // {
+    //     title: "AI EVENT",
+    //     description:
+    //         "Join us for an insightful AI event focused on model building and accuracy techniques, essential for preparing for the upcoming AI challenge. This session aims to equip participants with key skills and insights that will enhance their performance and foster innovation.",
+    //     date: "September 30, 2024",
+    //     venue: "Online",
+    //     timing: "6:30 PM - 8:30 PM",
+    //     eventStatus: "Upcoming",
+    //     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+    // },
     {
         title: "WORKSHOP ON REACT",
         description:
