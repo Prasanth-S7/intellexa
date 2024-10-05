@@ -33,7 +33,7 @@ export function SparklesTitle() {
         <FlipWordsDemo />
       </div>
 
-      {/* Techtober Highlight */}
+     
       <HeroHighlight>
         <div className="text-white text-lg md:text-xl font-semibold mb-5 -mt-9 ">
           <Highlight>Techtober is live now!</Highlight> Join us for exciting tech talks, workshops, and more.
@@ -81,10 +81,10 @@ export function SparklesTitle() {
 
         {/* Dynamic Instagram and LinkedIn visibility */}
         <div className={`flex space-x-10 transition-all duration-300 ${hover ? 'opacity-100' : 'opacity-0'} ${hover ? 'translate-y-0' : '-translate-y-4'}`} style={{ transition: 'transform 0.3s ease, opacity 0.3s ease' }}>
-          <div className={`${hover ? 'block' : 'hidden'} transition-all duration-300`}>
-            <span className="transition-all duration-300">{<Instagram />}</span>
+          <div className={`${hover ? 'block' : 'hidden'} transition-all duration-300 mt-10`}>
+            <span className="transition-all duration-300 ">{<Instagram />}</span>
           </div>
-          <div className={`${hover ? 'block' : 'hidden'} transition-all duration-300`}>
+          <div className={`${hover ? 'block' : 'hidden'} transition-all duration-300 mt-10`}>
             <span className="transition-all duration-300">{<Linkedin />}</span>
           </div>
         </div>

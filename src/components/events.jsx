@@ -6,7 +6,8 @@ import resumeBuilding from "@/assets/resumeBuilding.png";
 export function CardHoverEffectDemo() {
     return (
         <div className="max-w-5xl mx-auto">
-            <HoverEffect items={projects} />
+            <HoverEffect items={projects} className="your-custom-class" isGuidelinePage={false} />
+
         </div>
     );
 }
@@ -45,34 +46,52 @@ export const projects = [
     //     eventStatus: "Upcoming",
     //     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
     // },
+    // {
+    //     title: "WORKSHOP ON REACT",
+    //     description:
+    //         "This workshop is designed to introduce students to the fundamentals of web development through React. The objective is to empower participants with the essential skills needed to embark on their web development careers and make a lasting impression in the industry.",
+    //     date: "October 3-4, 2024",
+    //     venue: "Offline (Idea Factory)",
+    //     timing: "3:00 PM - 5:00 PM",
+    //     eventStatus: "Upcoming",
+    //     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+    // },
     {
-        title: "WORKSHOP ON REACT",
+        title: "WEB UNFOLD",
         description:
-            "This workshop is designed to introduce students to the fundamentals of web development through React. The objective is to empower participants with the essential skills needed to embark on their web development careers and make a lasting impression in the industry.",
-        date: "October 3-4, 2024",
-        venue: "Offline (Idea Factory)",
-        timing: "3:00 PM - 5:00 PM",
+            "Web Unfold is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community.",
+        startDate: "7 th oct",
+        endDate: "12 th oct",
         eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
     },
     {
-        title: "TECHTOBER CHALLENGE",
+        title: "POSTER CHALLENGE - FutureFrame",
         description:
-            "TECHTOBER invites REC students to participate in a week-long virtual competition featuring three key challenges: Website Recreation, AI Model Accuracy, and Poster Making. This event encourages participants to showcase their skills, compete for prizes, and develop expertise in web development, AI, and design.",
-        date: "October 7-14, 2024",
-        hostedBy: "INTELLEXA REC",
+            "Future Frame is a creative poster challenge for 1st and 2nd-year students to showcase their tech journey through original designs. Create impactful posters that reflect innovation, creativity, and personal growth in the tech world.",
+        startDate: "7 th oct",
+        endDate: "12 th oct",
         eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
     },
     {
-        title: "INTRODUCTION TO BACKEND TECHNOLOGY",
+        title: "AI CHALLENGE",
         description:
-            "This workshop provides a comprehensive introduction to backend technologies, serving as a foundational step in students' journeys toward backend development. Participants will gain a solid understanding of backend principles, enabling them to navigate backend development with confidence.",
-        date: "October 11, 2024",
-        venue: "Online",
-        timing: "7:00 PM - 8:00 PM",
+            "The AI Challenge is a competition where participants develop machine learning models using a provided training dataset. Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. Follow the submission guidelines to compete successfully.",
+        startDate: "7th Oct",
+        endDate: "12th Oct",
         eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
+    },
+    {
+        title: "SHE-UI: Designing with purpose",
+        description:
+        "Join the UI/UX Relay for an exciting design challenge! Teams of two will collaborate to solve design problems in a relay format, creating innovative and visually stunning solutions while showcasing creativity, teamwork, and design skills.",
+            date: " ",
+            venue: "Offline",
+            timing: " ",
+        eventStatus: "Upcoming",
+        registerLink: "",
     },
     {
         title: "SESSION ON IOT",
