@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import { ShootingStarsAndStarsBackgroundDemo } from '@/components/shootingStars';
 import { AboutUs } from './aboutus';
 import { FloatingNavDemo } from './updated-navbar';
-
+import EarthCanvas from "@/components/earth"
 export const HeroSectionClient = () => {
     const heroRef = useRef(null);
 
@@ -14,10 +14,15 @@ export const HeroSectionClient = () => {
                 <ShootingStarsAndStarsBackgroundDemo />
             </section>
             <section>
+
                 {/* <DotBackgroundDemo> */}
                     <AboutUs heroRef={heroRef} />
                 {/* </DotBackgroundDemo> */}
             </section>
+            <section>
+            <EarthCanvas/>
+            </section>
+
         </div>
     );
 };
