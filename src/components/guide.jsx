@@ -75,7 +75,7 @@ export const guidelines = [
         "Submit designs digitally along with a brief description of your approach.",
         "Exciting prizes will be awarded to top teams based on creativity and teamwork.",
         "Plagiarism is strictly prohibited all work must be original.",
-        "For any clarifications, please contact the event head: [Event Head Name] at [Event Head Email]."
+        "For any clarifications, please contact the event head: Shivani.B at 230401146@rajalakshmi.edu.in."
     ]
 }
 
