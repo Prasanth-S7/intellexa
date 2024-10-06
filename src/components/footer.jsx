@@ -83,7 +83,7 @@ export const Footer = (() => {
                                 </a>
                             </li>
                             <li>
-                                <a className="text-gray-700 transition hover:text-[#9966CC] dark:text-white dark:hover:text-[#9966CC]" href="#footer">
+                                <a className="text-gray-700 transition hover:text-[#9966CC] dark:text-white dark:hover:text-[#9966CC]" href="https://chat.whatsapp.com/DcRsEoPoKssAUD4R53CTdH">
                                     Contact
                                 </a>
                             </li>
