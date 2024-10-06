@@ -13,13 +13,13 @@ export const HeroSectionClient = () => {
                 <FloatingNavDemo></FloatingNavDemo>
                 <ShootingStarsAndStarsBackgroundDemo />
             </section>
-            <section>
+            <section className='-mb-[100px]'>
 
                 {/* <DotBackgroundDemo> */}
                     <AboutUs heroRef={heroRef} />
                 {/* </DotBackgroundDemo> */}
             </section>
-            <section>
+            <section clas>
             <EarthCanvas/>
             </section>
 

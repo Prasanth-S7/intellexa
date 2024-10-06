@@ -90,14 +90,14 @@ export const projects = [
         date: "7th to 14th October 2024",
         venue: "Offline",
         timing: "TBD",
-        eventStatus: "Registration Coming Soon",
+        eventStatus: "Registration open",
         registerLink: "https://forms.gle/oDzzVB6ZiEDkdnbW6",
     },
     {
         title: "SESSION ON IOT",
         description:
             "🌐 This session aims to introduce students to the fundamentals of IoT, including its real-time applications and future prospects for enthusiasts in this field. 🔌 Participants will also explore innovative project ideas to further their understanding of IoT. 💡",
-        date: "7th to 14th October 2024",
+        date: "TBD",
         venue: "Offline (Idea Factory)",
         timing: "3:00 PM - 5:00 PM",
         eventStatus: "Registration Coming Soon",
@@ -107,7 +107,7 @@ export const projects = [
         title: "HANDS-ON WORKSHOP ON FLUTTER",
         description:
             "📱 In collaboration with the Namma Flutter Community from Tamil Nadu, this hands-on workshop aims to provide participants with a solid foundation in Flutter. 🚀 Students will gain practical experience in developing a basic mobile application, enhancing their skills in mobile development. 💻📱",
-        date: "7th to 14th October 2024",
+        date: "TDB",
         venue: "Offline (Idea Factory Lab)",
         timing: "8:00 AM - 5:00 PM",
         eventStatus: "Registration Coming Soon",
@@ -117,7 +117,7 @@ export const projects = [
         title: "DSA WORKSHOP",
         description:
             "💻 This hands-on workshop focuses on mastering the fundamentals of Data Structures and Algorithms (DSA). 📊 It is ideal for students looking to enhance their problem-solving abilities and prepare effectively for technical interviews. 🔍",
-        date: "7th to 14th October 2024",
+        date: "TBD",
         venue: "Offline - A105",
         timing: "3:00 PM - 5:00 PM",
         eventStatus: "Registration Coming Soon",
