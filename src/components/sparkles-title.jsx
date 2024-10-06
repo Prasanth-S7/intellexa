@@ -80,9 +80,9 @@ export function SparklesTitle() {
             </div>
           </a>
         </div>
-        {/* <div className={`${hover ? 'block' : 'hidden'}`}>
+        <div className={`${hover ? 'block' : 'hidden'}`}>
           <Socials></Socials>
-        </div> */}
+        </div>
       </div>
     </div>
   );
