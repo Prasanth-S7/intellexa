@@ -11,72 +11,62 @@ export function GuidelinesPage() {
     );
 }
 
-
 export const guidelines = [
     {
         "title": "WEB UNFOLD",
         "guidelines": [
-            "Participants will receive design files and assets at the beginning of the event.",
-            "Each participant must build a website based on the provided designs.",
-            "Participants are required to push their completed projects to GitHub before the end date.",
-            "A Google Form will be provided for participants to submit their GitHub repository link.",
-            "Any tech stack can be used, but the use of no-code tools is strictly prohibited.",
-            "Plagiarism is strictly prohibited; all work must be original.",
-            "Participants must ensure that their submissions comply with all guidelines to qualify for evaluation.",
-            "For any clarifications, please contact the event head: [Event Head Name] at [Event Head Email].",
-
-        ]
-    }
-    ,
+            "Participants will get design files at the start of the event.",
+            "Build a website based on the provided designs.",
+            "You can use any tech stack, but no no-code tools are allowed.",
+            "All work must be original plagiarism will not be tolerated.",
+            "Submit your project GitHub or Drive link on the Google Form before the deadline by clicking the accept button.",
+            "Assets are available in the Drive link. 📁",
+            "Event Head: Jeffrin P, Phone: 6383381719. 📞"
+        ],
+        "driveLink": "https://drive.google.com/drive/folders/1uC_-wX379KrexKm7ACUDyxHmgB3BlYTS?usp=drive_link",
+        "registerLink": "https://forms.gle/qhnrvFbupSZtQhwA7"
+    },
     {
-       "title": "POSTER CHALLENGE - FutureFrame",
+        "title": "POSTER CHALLENGE - FutureFrame",
         "guidelines": [
-            "Open to 1st and 2nd-year students. Individual participation is required.",
-            "Theme: Crafting your tech journey.",
-            "Poster size should be A3, and digital formats accepted are PDF, PNG, or JPEG with a minimum resolution of 300 DPI.",
-            "Content must be original; the use of templates is prohibited, but online design tools (Canva, Figma, etc.) are allowed.",
-            "Submit via [gform] by the end of the event. Late submissions will not be accepted.",
-            "Participants must submit original poster designs based on the given theme.",
-            "All designs should be submitted in high-resolution format.",
-            "A Google Form will be provided for participants to upload their posters.",
-            "The use of digital tools for design is encouraged, but traditional methods are also welcome.",
-            "Handmade posters are also accepted! Please bring necessary materials like laps and poster-making kits as per your requirements",
-            "Plagiarism is strictly prohibited all work must be original.",
-            "For any clarifications, please contact the event head: KaarunyaShree G at 221001065@rajalakshmi.edu.in."
-        ] 
-    }
-,    
+            "Open to 1st and 2nd-year students; individual participation only. 👩‍🎓👨‍🎓",
+            "Theme: Share your tech journey.",
+            "Poster size should be A3  submit as PDF, PNG, or JPEG.",
+            "Content must be original templates are not allowed.",
+            "Use digital tools or traditional methods for your design.",
+            "Bring any necessary materials for handmade posters.",
+            "Submit your project GitHub or Drive link on the Google Form before the deadline by clicking the accept button.",
+            "Event Head: KaarunyaShree G, Phone: 9176072833. 📞"
+        ],
+        "registerLink": "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+    },
     {
         "title": "AI CHALLENGE",
         "guidelines": [
-            "Participants will receive the training dataset at the start of the competition.",
-            "Develop your models and validate them on a subset of the training data.",
-            "Submit your models and reports by the deadline; no access to the test dataset during development.",
-            "Models will be tested on a hidden test dataset to ensure fairness and prevent overfitting.",
-            "Each submission will be scored based on the evaluation criteria, with overall scores calculated to rank participants.",
-            "Submissions should include model code, documentation or a README file explaining the steps and model design, a final trained model file (if applicable), and a brief report (2-3 pages) outlining the techniques used and key findings.",
-            "Ensure that your model and code are submitted before the communicated deadline.",
-            "The overall score will be calculated with 40% weightage on training accuracy and 60% weightage on hidden test dataset performance, using the formula: Final Score = (0.40 × Training Accuracy) + (0.60 × Hidden Test Performance).",
-            "For any clarifications, please contact the event head:Yudeeswaran at 221501182@rajalakshmi.edu.in."
-        ]
+            "Receive a training dataset at the start of the competition. 🤖",
+            "Create and test your models using the provided data.",
+            "Models will be tested on a hidden dataset for fairness.",
+            "Scoring will be based on your model's performance.",
+            "Include model code, documentation, and a brief report.",
+            "Submit your project GitHub or Drive link on the Google Form before the deadline by clicking the accept button.",
+            "Assets are available in the Drive link. 📁",
+            "Event Head: Yudeeswaran, Phone: 8925390408. 📞"
+        ],"driveLink": "https://drive.google.com/your-web-unfold-assets-link",
+        "registerLink": "https://forms.gle/eDFpAc52nk65SdPM8"
+    },
+    {
+        "title": "SHE-UI: Designing with purpose",
+        "guidelines": [
+            "Teams must have two members. 👥",
+            "Choose a problem statement to work on together.",
+            "One member starts the design the other finishes it.",
+            "Use any digital design tools you prefer.",
+            "Bring your own laptops and necessary tools.",
+            "Work together as a team without outside help.",
+            "Use digital formats like Figma, Adobe XD, Sketch, PDF, or WIX Studio for your design submissions.",
+            "Submit your design with a brief explanation of your approach.",
+            "Event Head: Shivani.B, Phone: 8939191950. 📞"
+        ],
+        "registerLink": "#"
     }
-   ,
-   {
-    "title": "SHE-UI: Designing with purpose",
-    "guidelines": [
-        "Teams must consist of two members.",
-        "Randomly select a problem statement to work on.",
-        "One member will start the design, and the other will complete it.",
-        "Use digital formats such as Figma, Adobe XD, Sketch, PDF, WIX Studio, etc.",
-        "Submission deadline is October 14th, 2024, by 11:59 PM.",
-        "Bring your own laptops and tools to the event.",
-        "Work effectively as a team and collaborate well.",
-        "No external help or assistance is allowed during the event.",
-        "Submit designs digitally along with a brief description of your approach.",
-        "Exciting prizes will be awarded to top teams based on creativity and teamwork.",
-        "Plagiarism is strictly prohibited all work must be original.",
-        "For any clarifications, please contact the event head: Shivani.B at 230401146@rajalakshmi.edu.in."
-    ]
-}
-
 ];

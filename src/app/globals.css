@@ -163,6 +163,7 @@
   color: var(--c-color);
   background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
   box-shadow: 0 0 14px var(--c-shadow);
+  
 }
 
 .uiverse:before {
