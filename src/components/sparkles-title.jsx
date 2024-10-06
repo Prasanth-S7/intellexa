@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import { SparklesCore } from "./ui/sparkles";
 import { FlipWordsDemo } from "./innovate-inspire";
-import { Linkedin } from "./linkedin/linkedin";
-import { Instagram } from "./instagram/instagram";
+// import { Linkedin } from "./linkedin/linkedin";
+// import { Instagram } from "./instagram/instagram";
 import Scene from "./secen";
 import { Highlight, HeroHighlight } from "./ui/hero-highlight";
+// import { Whatsapp } from "./whatsapp/whatsapp";
+import { Socials } from "./socials/social";
 
 export function SparklesTitle() {
   const [hover, setHover] = useState(false);
@@ -33,7 +35,7 @@ export function SparklesTitle() {
         <FlipWordsDemo />
       </div>
 
-     
+
       <HeroHighlight>
         <div className="text-white text-lg md:text-xl font-semibold mb-5 -mt-9 ">
           <Highlight>Techtober is live now!</Highlight> Join us for exciting tech talks, workshops, and more.
@@ -78,15 +80,8 @@ export function SparklesTitle() {
             </div>
           </a>
         </div>
-
-        {/* Dynamic Instagram and LinkedIn visibility */}
-        <div className={`flex space-x-10 transition-all duration-300 ${hover ? 'opacity-100' : 'opacity-0'} ${hover ? 'translate-y-0' : '-translate-y-4'}`} style={{ transition: 'transform 0.3s ease, opacity 0.3s ease' }}>
-          <div className={`${hover ? 'block' : 'hidden'} transition-all duration-300 mt-10`}>
-            <span className="transition-all duration-300 ">{<Instagram />}</span>
-          </div>
-          <div className={`${hover ? 'block' : 'hidden'} transition-all duration-300 mt-10`}>
-            <span className="transition-all duration-300">{<Linkedin />}</span>
-          </div>
+        <div className={`${hover ? 'block' : 'hidden'}`}>
+          <Socials></Socials>
         </div>
       </div>
     </div>
