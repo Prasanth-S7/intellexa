@@ -7,6 +7,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 });
 export default function Home() {
   return (
+    
     <div className='overflow-x-hidden'>
       <HeroSectionClient />
       <section className='overflow-hidden'>
