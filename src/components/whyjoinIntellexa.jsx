@@ -143,7 +143,12 @@ export const TeamSpotlight = () => {
     {
       teamName: "App Development Team",
       description: "Creates and maintains mobile applications for the club. Focuses on intuitive design, high performance, and seamless functionality to deliver a top-notch user experience on all devices."
+    },
+    {
+      teamName: "Backend Team",
+      description: "Designs and manages the server-side logic and databases for the club's applications. Ensures robust data management, security, and scalability while optimizing performance to support seamless interactions between users and the club's digital platforms."
     }
+    
   ];
 
   return (

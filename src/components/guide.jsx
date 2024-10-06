@@ -52,7 +52,7 @@ export const guidelines = [
             "Assets are available in the Drive link. 📁",
             "Contact: Joderick Sherwin J (Phone: 7094944667), Yudeeswaran (Phone: 8925390408). 📞" 
         ],
-        "driveLink": "https://drive.google.com/your-web-unfold-assets-link",
+        "driveLink": "https://drive.google.com/drive/folders/1RPNpECLTaLAgDUVb0Zms6CtRJD8Ik8ZU?usp=sharing",
         "registerLink": "https://forms.gle/eDFpAc52nk65SdPM8"
     },
     {
