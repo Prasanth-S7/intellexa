@@ -182,8 +182,8 @@ export const TeamSpotlight = () => {
               className="card absolute md:w-[465px] md:h-[465px] h-[200px] w-full  mt-0 shadow-lg"
               style={{
                 zIndex: cards.length + index,
-                border: '1px solid rgb(140, 100, 220)',
-                boxShadow: '0 4px 8px rgba(140, 100, 220, 0.3)',
+                // border: '1px solid rgb(140, 100, 220)',
+                // boxShadow: '0 4px 8px rgba(140, 100, 220, 0.3)',
               }}
             >
               <CardSpotlightDemo teamName={teamName} description={description} index={index}></CardSpotlightDemo>
