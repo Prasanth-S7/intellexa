@@ -7,7 +7,7 @@ export function CardSpotlightDemo({ teamName, description, index, className }) {
       border: '1px solid rgb(140, 100, 220)',
       boxShadow: '0 4px 8px rgba(140, 100, 220, 0.3)',
     }}
-    className={`h-full w-full ${className}`}>
+    className={`w-[465px] h-[465px] ${className}`}>
       <div 
       className={`h-[300px] md:w-full md:h-full flex flex-col justify-between `} >
         <div className="text-custom-yellow lg:text-5xl md:text-5xl text-3xl font-slussen text-right z-50">{index + 1}</div>

@@ -27,6 +27,5 @@ export function Socials() {
                 </svg>
             </a>
         </div>
-
     )
 }
