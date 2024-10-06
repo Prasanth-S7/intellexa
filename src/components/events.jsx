@@ -59,68 +59,68 @@ export const projects = [
     {
         title: "WEB UNFOLD",
         description:
-            "Web Unfold is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community.",
-        startDate: "7 th oct",
-        endDate: "12 th oct",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
+            "🌐 Web Unfold is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community. 💻🎨",
+        startDate: "7th Oct",
+        endDate: "14th Oct",
+        eventStatus: "Active",
+        registerLink: "https://forms.gle/qhnrvFbupSZtQhwA7",
     },
     {
         title: "POSTER CHALLENGE - FutureFrame",
         description:
-            "Future Frame is a creative poster challenge for 1st and 2nd-year students to showcase their tech journey through original designs. Create impactful posters that reflect innovation, creativity, and personal growth in the tech world.",
-        startDate: "7 th oct",
-        endDate: "12 th oct",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
+            "🎨 Future Frame is a creative poster challenge for 1st and 2nd-year students to showcase their tech journey through original designs. 🖌️ Create impactful posters that reflect innovation, creativity, and personal growth in the tech world. 🌟",
+        startDate: "7th Oct",
+        endDate: "14th Oct",
+        eventStatus: "Active",
+        registerLink: "https://forms.gle/p6ux9eC8R4XE1MbE7",
     },
     {
         title: "AI CHALLENGE",
         description:
-            "The AI Challenge is a competition where participants develop machine learning models using a provided training dataset. Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. Follow the submission guidelines to compete successfully.",
+            "🤖 The AI Challenge is a competition where participants develop machine learning models using a provided training dataset. 🧠 Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. 🏆 Follow the submission guidelines to compete successfully! 🚀",
         startDate: "7th Oct",
-        endDate: "12th Oct",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
+        endDate: "14th Oct",
+        eventStatus: "Active",
+        registerLink: "https://forms.gle/eDFpAc52nk65SdPM8",
     },
     {
         title: "SHE-UI: Designing with purpose",
         description:
-        "Join the UI/UX Relay for an exciting design challenge! Teams of two will collaborate to solve design problems in a relay format, creating innovative and visually stunning solutions while showcasing creativity, teamwork, and design skills.",
-            date: " ",
-            venue: "Offline",
-            timing: " ",
-        eventStatus: "Upcoming",
-        registerLink: "",
+            "👩‍💻 Join the UI/UX Relay for an exciting design challenge! Teams of two will collaborate to solve design problems in a relay format, creating innovative and visually stunning solutions while showcasing creativity, teamwork, and design skills. 🎨💡",
+        date: "7th to 14th October 2024",
+        venue: "Offline",
+        timing: "TBD",
+        eventStatus: "Registration Coming Soon",
+        registerLink: "https://forms.gle/oDzzVB6ZiEDkdnbW6",
     },
     {
         title: "SESSION ON IOT",
         description:
-            "This session aims to introduce students to the fundamentals of IoT, including its real-time applications and future prospects for enthusiasts in this field. Participants will also explore innovative project ideas to further their understanding of IoT.",
-        date: "October 16-17, 2024",
+            "🌐 This session aims to introduce students to the fundamentals of IoT, including its real-time applications and future prospects for enthusiasts in this field. 🔌 Participants will also explore innovative project ideas to further their understanding of IoT. 💡",
+        date: "7th to 14th October 2024",
         venue: "Offline (Idea Factory)",
         timing: "3:00 PM - 5:00 PM",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        eventStatus: "Registration Coming Soon",
+        registerLink: "#",
     },
     {
         title: "HANDS-ON WORKSHOP ON FLUTTER",
         description:
-            "In collaboration with the Namma Flutter Community from Tamil Nadu, this hands-on workshop aims to provide participants with a solid foundation in Flutter. Students will gain practical experience in developing a basic mobile application, enhancing their skills in mobile development.",
-        date: "Any Saturday in October 2024",
+            "📱 In collaboration with the Namma Flutter Community from Tamil Nadu, this hands-on workshop aims to provide participants with a solid foundation in Flutter. 🚀 Students will gain practical experience in developing a basic mobile application, enhancing their skills in mobile development. 💻📱",
+        date: "7th to 14th October 2024",
         venue: "Offline (Idea Factory Lab)",
         timing: "8:00 AM - 5:00 PM",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        eventStatus: "Registration Coming Soon",
+        registerLink: "#"
     },
     {
         title: "DSA WORKSHOP",
         description:
-            "This hands-on workshop focuses on mastering the fundamentals of Data Structures and Algorithms (DSA). It is ideal for students looking to enhance their problem-solving abilities and prepare effectively for technical interviews.",
-        date: "October 22, 2024",
+            "💻 This hands-on workshop focuses on mastering the fundamentals of Data Structures and Algorithms (DSA). 📊 It is ideal for students looking to enhance their problem-solving abilities and prepare effectively for technical interviews. 🔍",
+        date: "7th to 14th October 2024",
         venue: "Offline - A105",
         timing: "3:00 PM - 5:00 PM",
-        eventStatus: "Upcoming",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        eventStatus: "Registration Coming Soon",
+        registerLink: "#"
     }
-];
+]    

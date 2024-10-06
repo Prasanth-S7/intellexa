@@ -33,6 +33,8 @@ export const CardDescription = ({ className, children }) => {
         </p>
     );
 };
+
+
 export const HoverEffect = ({ items, className, isGuidelinePage }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -45,6 +47,7 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                     onMouseEnter={() => setHoveredIndex(idx)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 >
+                   
                     <AnimatePresence>
                         {hoveredIndex === idx && (
                             <motion.span
@@ -62,23 +65,59 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                             />
                         )}
                     </AnimatePresence>
+                    
+                    
                     <Card>
                     {isGuidelinePage ? (
-         <>
-              <CardTitle>{item.title}</CardTitle>
-            <div className="mt-6">
+    <>
+        <CardTitle className="text-2xl font-semibold mb-4">{item.title}</CardTitle>
+        <div className="mt-6 space-y-3">
             {item.guidelines && item.guidelines.length > 0 ? (
-                <ul className="list-disc pl-5">
+                <div className="space-y-2">
                     {item.guidelines.map((guideline, index) => (
-                        <li key={index} className=" text-sm">{guideline} </li>
+                        <div key={index} className="flex items-start space-x-2">
+                            <span className="text-lg font-medium text-purple-600">•</span>
+                            <p className="text-sm text-white-700">{guideline}</p>
+                        </div>
                     ))}
-                </ul>
-                ) : (
-                  <p>No guidelines available.</p>
-                     )}
-                    </div>
-                       </>
-                   )  : (
+                </div>
+            ) : (
+                <p className="text-sm text-white-500">No guidelines available.</p>
+            )}
+            {item.driveLink && (
+                <p className="mt-4 text-sm text-white-700">
+                    Drive Link: <a href={item.driveLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{item.driveLink}</a>
+                </p>
+            )}
+        </div>
+                                {item.registerLink && (
+                                    <div className="flex justify-center mt-4">
+                                        <a 
+                                            href={item.registerLink} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer" 
+                                            className="uiverse"
+                                        >
+                                            <div className="wrapper flex items-center justify-center space-x-2 relative">
+                                                <span>Accept</span> 
+                                                <div className="circle circle-12"></div>
+                                                <div className="circle circle-11"></div>
+                                                <div className="circle circle-10"></div>
+                                                <div className="circle circle-9"></div>
+                                                <div className="circle circle-8"></div>
+                                                <div className="circle circle-7"></div>
+                                                <div className="circle circle-6"></div>
+                                                <div className="circle circle-5"></div>
+                                                <div className="circle circle-4"></div>
+                                                <div className="circle circle-3"></div>
+                                                <div className="circle circle-2"></div>
+                                                <div className="circle circle-1"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                )}
+                            </>
+                        ) : (
                             <>
                                 {item.eventImage && (
                                     <Image
@@ -95,15 +134,15 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                     Event Status: {item.eventStatus}
                                 </p>
 
-                                {hoveredIndex === idx && (
-                                    <div className="mt-4 text-zinc-200">
-                                        {idx === 3 ? (
+                                <div className="mt-4 text-zinc-200">
+                                    {idx === 3 ? (
                                         <>
-                                        <p className="text-sm"><strong>Date:</strong> {item.date}</p>
-                                        <p className="text-sm"><strong>Venue:</strong> {item.venue}</p>
-                                         <p className="text-sm"><strong>Time:</strong> {item.timing}</p>
-                                        <a href="/guideline" className="inline-block mt-4 text-purple-600 hover:text-purple-800 font-semibold">
-                                        Click here for more detail</a>
+                                            <p className="text-sm"><strong>Date:</strong> {item.date}</p>
+                                            <p className="text-sm"><strong>Venue:</strong> {item.venue}</p>
+                                            <p className="text-sm"><strong>Time:</strong> {item.timing}</p>
+                                            <a href="/guideline" className="inline-block mt-4 text-purple-600 hover:text-purple-800 font-semibold">
+                                                Click here for more detail
+                                            </a>
                                         </>
                                     ) : (
                                         <>
@@ -114,7 +153,7 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                                     <a href="/guideline" className="inline-block mt-4 text-purple-600 hover:text-purple-800 font-semibold">
                                                         Click here for more details
                                                     </a>
-                                                    <p className="text-sm mt-3"><strong>Please submit your work by clicking the submit button 👇</strong></p>
+                                                    <p className="text-sm mt-3"><strong>Accept the Challenge by clicking the button below 👇</strong></p>
                                                 </>
                                             ) : (
                                                 <>
@@ -125,36 +164,39 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                             )}
                                         </>
                                     )}
-                                        {item.registerLink && (
-        <div className="flex justify-center mt-4">
-            <a 
-                href={ item.registerLink} 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="uiverse"
-            >
-                <div className="wrapper flex items-center justify-center space-x-2 relative">
-                    <span>{idx < 3 ? "Submit" : "Register"}</span> 
-                    <div className="circle circle-12"></div>
-                    <div className="circle circle-11"></div>
-                    <div className="circle circle-10"></div>
-                    <div className="circle circle-9"></div>
-                    <div className="circle circle-8"></div>
-                    <div className="circle circle-7"></div>
-                    <div className="circle circle-6"></div>
-                    <div className="circle circle-5"></div>
-                    <div className="circle circle-4"></div>
-                    <div className="circle circle-3"></div>
-                    <div className="circle circle-2"></div>
-                    <div className="circle circle-1"></div>
+                                    
+                                    {item.registerLink && (
+                                        <div className="flex justify-center mt-4">
+                                            <a 
+                                                href={idx < 4 ? item.registerLink : "#"} 
+                                                target={idx < 4 ? "_blank" : undefined}
+                                                rel="noopener noreferrer"
+                                                className="uiverse"
+                                            >
+                                                <div className="wrapper flex items-center justify-center space-x-2 relative">
+                                                    <span>{idx < 3 ? "Accept" : "Register"}</span> 
+                                                    <div className="circle circle-12"></div>
+                                                    <div className="circle circle-11"></div>
+                                                    <div className="circle circle-10"></div>
+                                                    <div className="circle circle-9"></div>
+                                                    <div className="circle circle-8"></div>
+                                                    <div className="circle circle-7"></div>
+                                                    <div className="circle circle-6"></div>
+                                                    <div className="circle circle-5"></div>
+                                                    <div className="circle circle-4"></div>
+                                                    <div className="circle circle-3"></div>
+                                                    <div className="circle circle-2"></div>
+                                                    <div className="circle circle-1"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    )}
+                                </div>
+                            </>
+                        )}
+                    </Card>
                 </div>
-            </a>
+            ))}
         </div>
-    )}  </div>  )}   
-     </>
-      )}
-    </Card>
-   </div>
-        ))}
-  </div>
-    )};
+    );
+};
