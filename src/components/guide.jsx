@@ -38,7 +38,7 @@ export const guidelines = [
             "Submit your project GitHub or Drive link on the Google Form before the deadline by clicking the accept button.",
             "Event Head: KaarunyaShree G, Phone: 9176072833. 📞"
         ],
-        "registerLink": "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
+        "registerLink": "https://forms.gle/p6ux9eC8R4XE1MbE7"
     },
     {
         "title": "AI CHALLENGE",
@@ -67,6 +67,6 @@ export const guidelines = [
             "Submit your design with a brief explanation of your approach.",
             "Event Head: Shivani.B, Phone: 8939191950. 📞"
         ],
-        "registerLink": "#"
+        "registerLink": "https://forms.gle/oDzzVB6ZiEDkdnbW6"
     }
 ];

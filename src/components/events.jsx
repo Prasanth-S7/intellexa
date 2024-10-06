@@ -72,7 +72,7 @@ export const projects = [
         startDate: "7th Oct",
         endDate: "14th Oct",
         eventStatus: "Active",
-        registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link",
+        registerLink: "https://forms.gle/p6ux9eC8R4XE1MbE7",
     },
     {
         title: "AI CHALLENGE",
@@ -91,7 +91,7 @@ export const projects = [
         venue: "Offline",
         timing: "TBD",
         eventStatus: "Registration Coming Soon",
-        registerLink: "#",
+        registerLink: "https://forms.gle/oDzzVB6ZiEDkdnbW6",
     },
     {
         title: "SESSION ON IOT",

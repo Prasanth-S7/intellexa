@@ -168,8 +168,8 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                     {item.registerLink && (
                                         <div className="flex justify-center mt-4">
                                             <a 
-                                                href={idx < 3 ? item.registerLink : "#"} 
-                                                target={idx < 3 ? "_blank" : undefined}
+                                                href={idx < 4 ? item.registerLink : "#"} 
+                                                target={idx < 4 ? "_blank" : undefined}
                                                 rel="noopener noreferrer"
                                                 className="uiverse"
                                             >
