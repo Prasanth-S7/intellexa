@@ -58,12 +58,6 @@
     --chart-5: 340 75% 55%;
   }
 
-  /* Global Scrollbar Styles */
-  /* html {
-    scrollbar-width: auto;
-    scrollbar-color: #faffcc var(--background);
-  } */
-
   .canvas-container {
     overflow: hidden;
     height: calc(100vh - 1px); 

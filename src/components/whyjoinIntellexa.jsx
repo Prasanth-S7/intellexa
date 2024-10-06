@@ -140,6 +140,10 @@ export const TeamSpotlight = () => {
       teamName: "AI Engineering Team",
       description: "Designs and implements AI-driven solutions. Develops intelligent systems that enhance the club's projects, pushing the boundaries of innovation and automation."
     },
+    {
+      teamName: "App Development Team",
+      description: "Creates and maintains mobile applications for the club. Focuses on intuitive design, high performance, and seamless functionality to deliver a top-notch user experience on all devices."
+    }
   ];
 
   return (
