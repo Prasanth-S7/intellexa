@@ -13,9 +13,9 @@ const Loader = () => {
 const Scene = () => {
   return (
     <div
-      className="canvas-container"
-      style={{
-        overflow: "hidden",
+    className="canvas-container hide-scrollbar" 
+    style={{
+      overflowY: "scroll",
         height: "calc(100vh - 1px)", 
         width: "90vw",
         margin: 0,

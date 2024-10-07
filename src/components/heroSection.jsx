@@ -19,7 +19,7 @@ export const HeroSectionClient = () => {
                     <AboutUs heroRef={heroRef} />
                 {/* </DotBackgroundDemo> */}
             </section>
-            <section clas>
+            <section>
             <EarthCanvas/>
             </section>
 
