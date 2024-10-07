@@ -17,7 +17,7 @@ export const guidelines = [
         "guidelines": [
             "Participants will get design files at the start of the event.",
             "Build a website based on the provided designs.",
-            "You can use any tech stack, but no no-code tools are allowed.",
+            "You can use any tech stack, with React as the preferred option. Beginners are welcome to choose their own stack, but no no-code tools are allowed.",
             "All work must be original; plagiarism will not be tolerated.",
             "Submit your project GitHub or Drive link on the Google Form before the deadline by clicking the accept button.",
             "Assets are available in the Drive link. 📁",
