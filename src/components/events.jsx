@@ -57,16 +57,16 @@ export const projects = [
     //     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
     // },
     {
-        title: "WEB UNFOLD",
+        title: "RE@CT REMIX",
         description:
-            "🌐 Web Unfold is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community. 💻🎨",
+            "🌐 Re@ct Remix is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community. 💻🎨",
         startDate: "7th Oct",
         endDate: "14th Oct",
         eventStatus: "Active",
         registerLink: "https://forms.gle/qhnrvFbupSZtQhwA7",
     },
     {
-        title: "POSTER CHALLENGE - FutureFrame",
+        title: "POSTER MAKING - FutureFrame",
         description:
             "🎨 Future Frame is a creative poster challenge for 1st and 2nd-year students to showcase their tech journey through original designs. 🖌️ Create impactful posters that reflect innovation, creativity, and personal growth in the tech world. 🌟",
         startDate: "7th Oct",
@@ -75,16 +75,16 @@ export const projects = [
         registerLink: "https://forms.gle/p6ux9eC8R4XE1MbE7",
     },
     {
-        title: "AI CHALLENGE",
+        title: "ACCURACY ARENA",
         description:
-            "🤖 The AI Challenge is a competition where participants develop machine learning models using a provided training dataset. 🧠 Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. 🏆 Follow the submission guidelines to compete successfully! 🚀",
+            "🤖 The Accuracy Arena is a competition where participants develop machine learning models using a provided training dataset. 🧠 Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. 🏆 Follow the submission guidelines to compete successfully! 🚀",
         startDate: "7th Oct",
         endDate: "14th Oct",
         eventStatus: "Active",
         registerLink: "https://forms.gle/eDFpAc52nk65SdPM8",
     },
     {
-        title: "SHE-UI: Designing with purpose",
+        title: "UI/UX RELAY: Designing with purpose",
         description:
             "👩‍💻 Join the UI/UX Relay for an exciting design challenge! Teams of two will collaborate to solve design problems in a relay format, creating innovative and visually stunning solutions while showcasing creativity, teamwork, and design skills. 🎨💡",
         date: "7th to 14th October 2024",

@@ -116,7 +116,7 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                                 </div>
                                             </div>
                                         </a>
-                                        {item.title == "AI CHALLENGE" && (
+                                        {item.title == "ACCURACY ARENA" && (
                                             <a
                                                 href="https://forms.gle/wWkLzMg4GZd63EDP9"
                                                 target="_blank"

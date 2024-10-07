@@ -13,7 +13,7 @@ export function GuidelinesPage() {
 
 export const guidelines = [
     {
-        "title": "WEB UNFOLD",
+        "title": "RE@CT REMIX",
         "guidelines": [
             "Participants will get design files at the start of the event.",
             "Build a website based on the provided designs.",
@@ -27,7 +27,7 @@ export const guidelines = [
         "registerLink": "https://forms.gle/qhnrvFbupSZtQhwA7"
     },
     {
-        "title": "POSTER CHALLENGE - FutureFrame",
+        "title": "POSTER MAKING - FutureFrame",
         "guidelines": [
             "Open to 1st and 2nd-year students; individual participation only. 👩‍🎓👨‍🎓",
             "Theme: Share your tech journey.",
@@ -41,7 +41,7 @@ export const guidelines = [
         "registerLink": "https://forms.gle/p6ux9eC8R4XE1MbE7"
     },
     {
-        "title": "AI CHALLENGE",
+        "title": "ACCURACY ARENA",
         "guidelines": [
             "Receive a training dataset at the start of the competition. 🤖",
             "Create and test your models using the provided data.",
@@ -56,7 +56,7 @@ export const guidelines = [
         "registerLink": "https://forms.gle/eDFpAc52nk65SdPM8"
     },
     {
-        "title": "SHE-UI: Designing with purpose",
+        "title": "UI/UX RELAY: Designing with purpose",
         "guidelines": [
             "Teams must have two members. 👥",
             "Choose a problem statement to work on together.",
