@@ -87,11 +87,12 @@ export const projects = [
         title: "UI/UX RELAY: Designing with purpose",
         description:
             "👩‍💻 Join the UI/UX Relay for an exciting design challenge! Teams of two will collaborate to solve design problems in a relay format, creating innovative and visually stunning solutions while showcasing creativity, teamwork, and design skills. 🎨💡",
-        date: "7th to 14th October 2024",
-        venue: "Offline",
-        timing: "TBD",
-        eventStatus: "Registration open",
+        date: "23rd Oct",
+        venue: "Heritage hall",
+        timing: " 8.00am to 3.00pm",
+        eventStatus: "Registration coming soon",
         registerLink: "https://forms.gle/oDzzVB6ZiEDkdnbW6",
+    
     },
     {
         title: "SESSION ON IOT",
