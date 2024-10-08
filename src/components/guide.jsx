@@ -52,7 +52,7 @@ export const guidelines = [
             "Assets are available in the Drive link. 📁",
             "Contact: Joderick Sherwin J (Phone: 7094944667), Yudeeswaran (Phone: 8925390408). 📞" 
         ],
-        "driveLink": "https://drive.google.com/drive/folders/19yWRqnIcZvVz2Oat4gUZ6YFb3XgEppNL?usp=drive_link ",
+        // "driveLink": "https://drive.google.com/drive/folders/19yWRqnIcZvVz2Oat4gUZ6YFb3XgEppNL?usp=drive_link ",
         "registerLink": "https://forms.gle/eDFpAc52nk65SdPM8"
     },
     {

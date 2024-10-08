@@ -193,33 +193,65 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                             )}
                                         </>
                                     )}
-
-                                    {item.registerLink && (
-                                        <div className="flex justify-center mt-4">
-                                            <a
-                                                href={idx < 4 ? item.registerLink : "#"}
-                                                target={idx < 4 ? "_blank" : undefined}
-                                                rel="noopener noreferrer"
-                                                className="uiverse"
-                                            >
-                                                <div className="wrapper flex items-center justify-center space-x-2 relative">
-                                                    <span>{idx < 3 ? "Accept" : "Register"}</span>
-                                                    <div className="circle circle-12"></div>
-                                                    <div className="circle circle-11"></div>
-                                                    <div className="circle circle-10"></div>
-                                                    <div className="circle circle-9"></div>
-                                                    <div className="circle circle-8"></div>
-                                                    <div className="circle circle-7"></div>
-                                                    <div className="circle circle-6"></div>
-                                                    <div className="circle circle-5"></div>
-                                                    <div className="circle circle-4"></div>
-                                                    <div className="circle circle-3"></div>
-                                                    <div className="circle circle-2"></div>
-                                                    <div className="circle circle-1"></div>
+                                    <div className="flex space-x-4 justify-center">
+                                        <div>
+                                            {item.registerLink && (
+                                                <div className="flex justify-center mt-4">
+                                                    <a
+                                                        href={idx < 4 ? item.registerLink : "#"}
+                                                        target={idx < 4 ? "_blank" : undefined}
+                                                        rel="noopener noreferrer"
+                                                        className="uiverse"
+                                                    >
+                                                        <div className="wrapper flex items-center justify-center space-x-2 relative">
+                                                            <span>{idx < 3 ? "Accept" : "Register"}</span>
+                                                            <div className="circle circle-12"></div>
+                                                            <div className="circle circle-11"></div>
+                                                            <div className="circle circle-10"></div>
+                                                            <div className="circle circle-9"></div>
+                                                            <div className="circle circle-8"></div>
+                                                            <div className="circle circle-7"></div>
+                                                            <div className="circle circle-6"></div>
+                                                            <div className="circle circle-5"></div>
+                                                            <div className="circle circle-4"></div>
+                                                            <div className="circle circle-3"></div>
+                                                            <div className="circle circle-2"></div>
+                                                            <div className="circle circle-1"></div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
+
+                                            )}
                                         </div>
-                                    )}
+                                        <div>
+                                            {item.title === "ACCURACY ARENA" && (
+                                                <div className="flex justify-center mt-4">
+                                                    <a
+                                                        href="https://forms.gle/wWkLzMg4GZd63EDP9"
+                                                        target={idx < 4 ? "_blank" : undefined}
+                                                        rel="noopener noreferrer"
+                                                        className="uiverse"
+                                                    >
+                                                        <div className="wrapper flex items-center justify-center space-x-2 relative">
+                                                            <span>Submit</span>
+                                                            <div className="circle circle-12"></div>
+                                                            <div className="circle circle-11"></div>
+                                                            <div className="circle circle-10"></div>
+                                                            <div className="circle circle-9"></div>
+                                                            <div className="circle circle-8"></div>
+                                                            <div className="circle circle-7"></div>
+                                                            <div className="circle circle-6"></div>
+                                                            <div className="circle circle-5"></div>
+                                                            <div className="circle circle-4"></div>
+                                                            <div className="circle circle-3"></div>
+                                                            <div className="circle circle-2"></div>
+                                                            <div className="circle circle-1"></div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
                             </>
                         )}
