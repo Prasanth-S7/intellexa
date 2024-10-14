@@ -19,7 +19,7 @@ export function ShootingStarsAndStarsBackgroundDemo({ children }) {
             </h2>
             {children}
             <ShootingStars starHeight={2} starColor="white" className="min-h-screen" />
-            <StarsBackground className="min-h-screen py-0" />
+            {/* <StarsBackground className="min-h-screen py-0" /> */}
         </div>
     );
 }
