@@ -102,7 +102,7 @@ export const projects = [
         venue: "Offline (Idea Factory)",
         timing: "3:00 PM - 5:00 PM",
         eventStatus: "Registration Coming Soon",
-        registerLink: "#",
+        registerLink: "https://forms.gle/bfpvMjHwL3VpVrRJ6",
     },
     {
         title: "HANDS-ON WORKSHOP ON FLUTTER",
