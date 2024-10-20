@@ -175,7 +175,7 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                         </>
                                     ) : (
                                         <>
-                                            {idx < 3 || idx == 5? (
+                                            {idx < 3 || idx == 4? (
                                                 <>
                                                     <p className="text-sm"><strong>Start Date:</strong> {item.startDate}</p>
                                                     <p className="text-sm"><strong>End Date:</strong> {item.endDate}</p>
@@ -198,13 +198,13 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                             {item.registerLink && (
                                                 <div className="flex justify-center mt-4">
                                                     <a
-                                                        href={idx < 4 || idx == 5 ? item.registerLink : "#"}
+                                                        href={idx < 4 || idx == 4 ? item.registerLink : "#"}
                                                         target={idx < 4 ? "_blank" : undefined}
                                                         rel="noopener noreferrer"
                                                         className="uiverse"
                                                     >
                                                         <div className="wrapper flex items-center justify-center space-x-2 relative">
-                                                            <span>{idx < 3 || idx == 5 ? "Accept" : "Register"}</span>
+                                                            <span>{idx < 3 || idx == 4 ? "Accept" : "Register"}</span>
                                                             <div className="circle circle-12"></div>
                                                             <div className="circle circle-11"></div>
                                                             <div className="circle circle-10"></div>
