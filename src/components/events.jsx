@@ -101,7 +101,7 @@ export const projects = [
         date: "TBD",
         venue: "Offline (Idea Factory)",
         timing: "3:00 PM - 5:00 PM",
-        eventStatus: "Registration Coming Soon",
+        eventStatus: "Active",
         registerLink: "https://forms.gle/bfpvMjHwL3VpVrRJ6",
     },
     {
