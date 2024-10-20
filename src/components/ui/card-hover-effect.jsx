@@ -173,26 +173,15 @@ export const HoverEffect = ({ items, className, isGuidelinePage }) => {
                                                 Click here for more detail
                                             </a>
                                         </>
-                                    ) : (
-                                        <>
-                                            {idx < 3 || idx == 4? (
-                                                <>
-                                                    <p className="text-sm"><strong>Start Date:</strong> {item.startDate}</p>
-                                                    <p className="text-sm"><strong>End Date:</strong> {item.endDate}</p>
-                                                    <a href="/guideline" className="inline-block mt-4 text-purple-600 hover:text-purple-800 font-semibold">
-                                                        Click here for more details
-                                                    </a>
-                                                    <p className="text-sm mt-3"><strong>Accept the Challenge by clicking the button below 👇</strong></p>
-                                                </>
-                                            ) : (
+                                    )  : (
                                                 <>
                                                     <p className="text-sm"><strong>Date:</strong> {item.date}</p>
                                                     <p className="text-sm"><strong>Venue:</strong> {item.venue}</p>
                                                     <p className="text-sm"><strong>Time:</strong> {item.timing}</p>
                                                 </>
                                             )}
-                                        </>
-                                    )}
+                                        
+                                    
                                     <div className="flex space-x-4 justify-center">
                                         <div>
                                             {item.registerLink && (

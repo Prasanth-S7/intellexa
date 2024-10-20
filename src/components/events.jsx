@@ -56,33 +56,33 @@ export const projects = [
     //     eventStatus: "Upcoming",
     //     registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeRY5cmC8xwQzeroouFSO39aUr-8AtWLC_hczgdNfsnOUeW_g/viewform?usp=sf_link"
     // },
-    {
-        title: "RE@CT REMIX",
-        description:
-            "🌐 Re@ct Remix is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community. 💻🎨",
-        startDate: "7th Oct",
-        endDate: "14th Oct",
-        eventStatus: "Active",
-        registerLink: "https://forms.gle/qhnrvFbupSZtQhwA7",
-    },
-    {
-        title: "POSTER MAKING - FutureFrame",
-        description:
-            "🎨 Future Frame is a creative poster challenge for 1st and 2nd-year students to showcase their tech journey through original designs. 🖌️ Create impactful posters that reflect innovation, creativity, and personal growth in the tech world. 🌟",
-        startDate: "7th Oct",
-        endDate: "14th Oct",
-        eventStatus: "Active",
-        registerLink: "https://forms.gle/p6ux9eC8R4XE1MbE7",
-    },
-    {
-        title: "ACCURACY ARENA",
-        description:
-            "🤖 The Accuracy Arena is a competition where participants develop machine learning models using a provided training dataset. 🧠 Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. 🏆 Follow the submission guidelines to compete successfully! 🚀",
-        startDate: "7th Oct",
-        endDate: "14th Oct",
-        eventStatus: "Active",
-        registerLink: "https://forms.gle/eDFpAc52nk65SdPM8",
-    },
+    // {
+    //     title: "RE@CT REMIX",
+    //     description:
+    //         "🌐 Re@ct Remix is an exciting online event for web development enthusiasts to showcase their skills and creativity. Participants will transform provided design files into fully functional websites, emphasizing technical proficiency, originality, and collaboration within the web development community. 💻🎨",
+    //     startDate: "7th Oct",
+    //     endDate: "14th Oct",
+    //     eventStatus: "Active",
+    //     registerLink: "https://forms.gle/qhnrvFbupSZtQhwA7",
+    // },
+    // {
+    //     title: "POSTER MAKING - FutureFrame",
+    //     description:
+    //         "🎨 Future Frame is a creative poster challenge for 1st and 2nd-year students to showcase their tech journey through original designs. 🖌️ Create impactful posters that reflect innovation, creativity, and personal growth in the tech world. 🌟",
+    //     startDate: "7th Oct",
+    //     endDate: "14th Oct",
+    //     eventStatus: "Active",
+    //     registerLink: "https://forms.gle/p6ux9eC8R4XE1MbE7",
+    // },
+    // {
+    //     title: "ACCURACY ARENA",
+    //     description:
+    //         "🤖 The Accuracy Arena is a competition where participants develop machine learning models using a provided training dataset. 🧠 Teams will validate their models and submit their code and reports by the deadline. Models will be tested on a hidden dataset for fairness, and scoring will be based on performance. 🏆 Follow the submission guidelines to compete successfully! 🚀",
+    //     startDate: "7th Oct",
+    //     endDate: "14th Oct",
+    //     eventStatus: "Active",
+    //     registerLink: "https://forms.gle/eDFpAc52nk65SdPM8",
+    // },
     {
         title: "UI/UX RELAY: Designing with purpose",
         description:
@@ -90,7 +90,7 @@ export const projects = [
         date: "23rd Oct",
         venue: "Heritage hall",
         timing: " 8.00am to 3.00pm",
-        eventStatus: "Registration coming soon",
+        eventStatus: "Active",
         registerLink: "https://forms.gle/oDzzVB6ZiEDkdnbW6",
     
     },
@@ -98,24 +98,22 @@ export const projects = [
         title: "SESSION ON IOT",
         description:
             "🌐 This session aims to introduce students to the fundamentals of IoT, including its real-time applications and future prospects for enthusiasts in this field. 🔌 Participants will also explore innovative project ideas to further their understanding of IoT. 💡",
-        date: "TBD",
-        venue: "Offline (Idea Factory)",
+        date: "22 & 23 oct",
+        venue: "Idea Factory",
         timing: "3:00 PM - 5:00 PM",
         eventStatus: "Active",
-        startDate: "22th Oct",
-        endDate: "23th Oct",
         registerLink: "https://forms.gle/bfpvMjHwL3VpVrRJ6",
     },
-    {
-        title: "HANDS-ON WORKSHOP ON FLUTTER",
-        description:
-            "📱 In collaboration with the Namma Flutter Community from Tamil Nadu, this hands-on workshop aims to provide participants with a solid foundation in Flutter. 🚀 Students will gain practical experience in developing a basic mobile application, enhancing their skills in mobile development. 💻📱",
-        date: "TDB",
-        venue: "Offline (Idea Factory Lab)",
-        timing: "8:00 AM - 5:00 PM",
-        eventStatus: "Registration Coming Soon",
-        registerLink: "#"
-    },
+    // {
+    //     title: "HANDS-ON WORKSHOP ON FLUTTER",
+    //     description:
+    //         "📱 In collaboration with the Namma Flutter Community from Tamil Nadu, this hands-on workshop aims to provide participants with a solid foundation in Flutter. 🚀 Students will gain practical experience in developing a basic mobile application, enhancing their skills in mobile development. 💻📱",
+    //     date: "TDB",
+    //     venue: "Offline (Idea Factory Lab)",
+    //     timing: "8:00 AM - 5:00 PM",
+    //     eventStatus: "Registration Coming Soon",
+    //     registerLink: "#"
+    // },
     {
         title: "DSA WORKSHOP",
         description:
