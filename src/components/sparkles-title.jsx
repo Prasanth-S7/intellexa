@@ -34,15 +34,7 @@ export function SparklesTitle() {
       <div className="mb-0">
         <FlipWordsDemo />
       </div>
-
-
-      <HeroHighlight>
-        <div className="text-white text-lg md:text-xl font-semibold mb-5 -mt-9 ">
-          <Highlight>Techtober is live now!</Highlight> Join us for exciting tech talks, workshops, and more.
-        </div>
-      </HeroHighlight>
-
-      <div className="flex flex-col items-center mb-6">
+      <div className="flex flex-col items-center mb-6 mt-5">
         <div className="flex space-x-4 mb-2">
           <button className="uiverse" onClick={() => setHover(!hover)}>
             <div className="wrapper">
@@ -61,24 +53,6 @@ export function SparklesTitle() {
               <div className="circle circle-1"></div>
             </div>
           </button>
-
-          <a href="/events" className="uiverse">
-            <div className="wrapper flex items-center justify-center space-x-2 relative">
-              <span> Events</span>
-              <div className="circle circle-12"></div>
-              <div className="circle circle-11"></div>
-              <div className="circle circle-10"></div>
-              <div className="circle circle-9"></div>
-              <div className="circle circle-8"></div>
-              <div className="circle circle-7"></div>
-              <div className="circle circle-6"></div>
-              <div className="circle circle-5"></div>
-              <div className="circle circle-4"></div>
-              <div className="circle circle-3"></div>
-              <div className="circle circle-2"></div>
-              <div className="circle circle-1"></div>
-            </div>
-          </a>
         </div>
         <div className={`${hover ? 'block' : 'hidden'}`}>
           <Socials></Socials>
