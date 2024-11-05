@@ -32,7 +32,7 @@ const WallOfFame = (() => {
         <div className="px-7 py-5 ">
             <div className=" font-slussen text-white lg:text-6xl md:text-5xl text-4xl"> Wall Of Fame </div>
             <div className=" font-slussenLight lg:text-xl md:text-xl mt-6 text-sm text-white">Celebrating the outstanding achievements of Techtober winners. These individuals have demonstrated exceptional skills and innovation in their respective fields.</div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-7">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-7">
                 {winners.map((winner, index) => (
                     <Card key={index} className="bg-[#171717] border-gray-700 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1">
                         <CardHeader className="bg-black border-b p-6">
@@ -62,7 +62,7 @@ const WallOfFame = (() => {
                         </CardContent>
                     </Card>
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 })

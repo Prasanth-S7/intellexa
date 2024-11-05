@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
+@tailwind utilities;  
 @layer base {
   :root {
     --background: 0 0% 0%;
@@ -78,11 +77,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #faffcc;
+    background: #aeaeae;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #faffcc;
+    background: #aeaeae;
   }
   
   
@@ -121,6 +120,16 @@
   font-family: 'SlussenLight';
   src: url("../assets/fonts/Slussen-Extended-Light-TRIAL.otf") format("opentype");
 }
+
+/* @font-face {
+  font-family: 'karrik';
+  src: url("../assets/fonts/Karrik-Regular.woff2") format("woff2");
+} */
+
+/* @font-face {
+  font-family: 'LinealVf';
+  src: url("../assets/fonts/LinealVF.woff2") format("woff2");
+} */
 
 .font-slussen {
   font-family: 'Slussen', sans-serif;

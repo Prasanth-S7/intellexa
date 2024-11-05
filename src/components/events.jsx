@@ -13,10 +13,10 @@ export const projects = [
         title: "DSA WORKSHOP",
         description:
             "💻 This hands-on workshop focuses on mastering the fundamentals of Data Structures and Algorithms (DSA). 📊 It is ideal for students looking to enhance their problem-solving abilities and prepare effectively for technical interviews. 🔍",
-        date: "TBD",
+        date: "7th Nov 2024",
         venue: "Offline - A105",
         timing: "3:00 PM - 5:00 PM",
-        eventStatus: "Registration Coming Soon",
-        registerLink: "#"
+        // eventStatus: "Registration Coming Soon",
+        registerLink: "https://forms.gle/T9FPByTjoY51Vxuk6"
     }
 ]    
